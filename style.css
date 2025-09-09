@@ -1,24 +1,3 @@
-@media screen and (max-width: 600px) {
-  .flex-container {
-    width: 98vw;
-    height: 98vh;
-    min-width: 320px;
-    min-height: 400px;
-  }
-  .flex-item-1,
-  .flex-item-2,
-  .flex-item-3,
-  .flex-item-4,
-  .flex-item-5,
-  .flex-item-10 {
-    position: static !important;
-    width: 95vw !important;
-    height: auto !important;
-    margin-bottom: 10px;
-    left: unset !important;
-    top: unset !important;
-  }
-}
 body {
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
     linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
@@ -43,6 +22,7 @@ body {
     80px 80px, 80px 80px;
   font-family: "kode Mono", monospace !important;
   font-optical-sizing: auto;
+  overflow: auto;
 }
 
 .flex-container {
