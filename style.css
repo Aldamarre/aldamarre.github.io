@@ -37,6 +37,17 @@ body {
   padding: 0;
 }
 
+@media (max-width: 920px) {
+  .flex-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    transform: translate(0%, 0%);
+  }
+}
+
 .flex-item-1 {
   height: 400px;
   width: 580px;
