@@ -1,20 +1,9 @@
-@media (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .flex-container {
-    position: static;
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    transform: none;
-    left: 0;
-    top: 0;
-    padding: 10px 0;
-    box-sizing: border-box;
-    overflow-x: auto;
+    width: 98vw;
+    height: 98vh;
+    min-width: 320px;
+    min-height: 400px;
   }
   .flex-item-1,
   .flex-item-2,
@@ -22,13 +11,12 @@
   .flex-item-4,
   .flex-item-5,
   .flex-item-10 {
-    position: static;
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    height: auto;
-    margin: 10px 0;
-    box-sizing: border-box;
+    position: static !important;
+    width: 95vw !important;
+    height: auto !important;
+    margin-bottom: 10px;
+    left: unset !important;
+    top: unset !important;
   }
 }
 body {
@@ -132,6 +120,7 @@ body {
 
 .flex-item-7 {
   flex-grow: 1;
+  flex-shrink: ;
   flex-basis: auto;
   order: 6;
   align-self: auto;
