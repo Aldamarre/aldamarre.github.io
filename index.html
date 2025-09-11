@@ -1,115 +1,90 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=980, initial-scale=0.5, maximum-scale=0.5, user-scalable=no"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="bookshelf.css" />
-    <div class="crt"></div>
-  </head>
 
-  <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=980, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bookshelf.css" />
+  <div class="crt"></div>
+</head>
 
-    <div class="flex-container">
-      <div class="flex-item-1">
-        <div
-          class="tab"
-          style="
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+  </style>
+  <div class="container1">
+    <div class="flex-item-1">
+      <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-top-width: 0px;
-          "
-        >
-          <button
-            class="tablinks"
-            onclick="openCity(event, 'London')"
-            id="defaultOpen"
-          >
-            London
-          </button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">
-            Paris
-          </button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-            Tokyo
-          </button>
-        </div>
-
-        <!-- Tab content -->
-        <div
-          id="London"
-          class="tabcontent"
-          style="
-            display: block;
-            width: auto;
-            height: auto;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-          "
-        >
-          <h3>London</h3>
-          <p>London is the capital city of England.</p>
-        </div>
-
-        <div
-          id="Paris"
-          class="tabcontent"
-          style="
-            display: block;
-            width: auto;
-            height: auto;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-          "
-        >
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
-        </div>
-
-        <div
-          id="Tokyo"
-          class="tabcontent"
-          style="
-            display: block;
-            width: auto;
-            height: auto;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-          "
-        >
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
-        </div>
+          ">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+          London
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">
+          Paris
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+          Tokyo
+        </button>
       </div>
-      <div class="flex-item-2">
-        <div
-          class="tab"
-          style="
+
+      <!-- Tab content -->
+      <div id="London" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+
+      <div id="Paris" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+
+      <div id="Tokyo" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </div>
+    <div class="flex-item-2">
+      <div class="tab" style="
             margin-bottom: 10px;
             border-left-width: 0px;
             border-top-width: 0px;
             border-right-width: 0px;
-          "
-        >
-          <button class="tablinks active" id="defaultOpen">MyPins</button>
-        </div>
-        <iframe
-          src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/room-inspiration/&hideHeader=1&hideFooter=1&transparent=1"
-          style="
+          ">
+        <button class="tablinks active" id="defaultOpen">MyPins</button>
+      </div>
+      <iframe
+        src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/room-inspiration/&hideHeader=1&hideFooter=1&transparent=1"
+        style="
             width: 100%;
             border-left-style: solid;
             border-left-width: 0px;
@@ -120,404 +95,310 @@
             height: 84%;
             border-bottom-width: 0px;
             border-bottom-style: solid;
-          "
-        ></iframe>
-      </div>
-      <div class="flex-item-3">Flex Item 3</div>
-      <div class="flex-item-4">
-        <div
-          class="tab"
-          style="
+            scrollbar-width: none;
+
+          "></iframe>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="flex-item-3">Flex Item 3</div>
+
+    <div class="flex-item-4">Flex Item 4</div>
+
+    <div class="flex-item-5">Flex Item 5</div>
+  </div>
+  <div class="container3">
+    <div class="flex-item-6">
+      <div class="tab" style="
             margin-bottom: 0px;
             border-bottom-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-top-width: 0px;
-          "
-        >
-          <button class="tablinks active" id="defaultOpen">MyBooks</button>
-        </div>
+          ">
+        <button class="tablinks active" id="defaultOpen">MyBooks</button>
+      </div>
 
-        <div class="bookshelf">
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+      <div class="bookshelf">
+        <div class="book">
+          <div class="side spine" style="
                 height: 269px;
                 top: 11px;
                 background-image: url('/Books/WOKSPINE.jpeg');
                 background-color: brown;
-              "
-            >
-              <img src="/Books/WOKSPINE.jpeg" height="100%" width="100%" />
-            </div>
-            <div class="side top" style="top: 11px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/WOKSPINE.jpeg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 11px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 269px;
                 top: 11px;
                 background-image: url('/Books/twok.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/7235533-the-way-of-kings;'"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/7235533-the-way-of-kings;'"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 238px;
                 top: 42px;
                 background-image: var(--pyramid);
                 background-color: maroon;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-              <img src="/Books/WORSPINE.jpg" height="100%" width="100%" />
-            </div>
-            <div class="side top" style="top: 42px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+            <img src="/Books/WORSPINE.jpg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 42px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 238px;
                 top: 42px;
                 background-image: url('/Books/wor.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/17332218-words-of-radiance';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/17332218-words-of-radiance';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 250px;
                 top: 30px;
                 background-image: var(--pyramid);
                 background-color: saddlebrown;
-              "
-            >
-              <img src="/Books/OBSPINE.jpeg" height="100%" width="100%" />
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 30px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/OBSPINE.jpeg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 30px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 250px;
                 top: 30px;
                 background-image: url('/Books/oathbringer.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/34002132-oathbringer';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/34002132-oathbringer';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 224px;
                 top: 56px;
                 background-image: var(--argyle);
                 background-color: darkgreen;
-              "
-            >
-              <img src="/Books/ROWSPINE.jpg" height="100%" width="100%" />
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 56px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/ROWSPINE.jpg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 56px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 224px;
                 top: 56px;
                 background-image: url('/Books/row.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/49021976-rhythm-of-war';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/49021976-rhythm-of-war';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 287px;
                 top: -7px;
                 background-image: var(--tartan);
                 background-color: midnightblue;
-              "
-            >
-              <img src="/Books/WATSPINE.jpeg" height="100%" width="100%" />
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: -7px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/WATSPINE.jpeg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: -7px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 287px;
                 top: -7px;
                 background-image: url('/Books/wat.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/203578847-wind-and-truth';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/203578847-wind-and-truth';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 225px;
                 top: 55px;
                 background-image: var(--stairs);
                 background-color: maroon;
-              "
-            >
-              <img src="/Books/MBFESPINE.jpg" height="100%" width="100%" />
-            </div>
-            <div class="side top" style="top: 55px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/MBFESPINE.jpg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 55px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 225px;
                 top: 55px;
                 background-image: url('/Books/mtfe.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/book/show/68428.Mistborn';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/book/show/68428.Mistborn';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 236px;
                 top: 44px;
                 background-image: var(--stairs);
                 background-color: saddlebrown;
-              "
-            >
-              <img src="/Books/RRSPINE.jpg" height="100%" width="100%" />
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 44px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <img src="/Books/RRSPINE.jpg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 44px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 236px;
                 top: 44px;
                 background-image: url('/Books/redrising.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=Rhythm of War';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=Rhythm of War';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 231px;
                 top: 49px;
                 background-image: var(--argyle);
                 background-color: midnightblue;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 49px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 49px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 231px;
                 top: 49px;
                 background-image: url('/static/img/bookshelf/48.png');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=Oathbringer';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=Oathbringer';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 275px;
                 top: 5px;
                 background-image: var(--argyle);
                 background-color: saddlebrown;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 5px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 5px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 275px;
                 top: 5px;
                 background-image: url('/static/img/bookshelf/47.png');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=Words Of Radiance';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=Words Of Radiance';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 252px;
                 top: 28px;
                 background-image: var(--argyle);
                 background-color: darkgreen;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 28px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 28px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 252px;
                 top: 28px;
                 background-image: url('/static/img/bookshelf/46.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=The Way Of Kings';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=The Way Of Kings';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 234px;
                 top: 46px;
                 background-image: var(--pyramid);
                 background-color: midnightblue;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 46px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 46px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 234px;
                 top: 46px;
                 background-image: url('/static/img/bookshelf/45.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=The Wise Man\'s Fear';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=The Wise Man\'s Fear';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 239px;
                 top: 41px;
                 background-image: var(--argyle);
                 background-color: midnightblue;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 41px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 41px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 239px;
                 top: 41px;
                 background-image: url('/static/img/bookshelf/44.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=The Name Of The Wind';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=The Name Of The Wind';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 223px;
                 top: 57px;
                 background-image: var(--argyle);
                 background-color: darkgreen;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: 57px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 57px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 223px;
                 top: 57px;
                 background-image: url('/static/img/bookshelf/43.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=Cloud Atlas';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=Cloud Atlas';"></div>
+        </div>
 
-          <div class="book">
-            <div
-              class="side spine"
-              style="
+        <div class="book">
+          <div class="side spine" style="
                 height: 284px;
                 top: -4px;
                 background-image: var(--argyle);
                 background-color: saddlebrown;
-              "
-            >
-              <!-- removed spine-title and spine-author -->
-            </div>
-            <div class="side top" style="top: -4px"></div>
-            <div
-              class="side cover"
-              style="
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: -4px"></div>
+          <div class="side cover" style="
                 cursor: pointer;
                 height: 284px;
                 top: -4px;
                 background-image: url('/static/img/bookshelf/42.jpg');
-              "
-              onclick="window.location='https://www.goodreads.com/search?q=Fight Club';"
-            ></div>
-          </div>
+              " onclick="window.location='https://www.goodreads.com/search?q=Fight Club';"></div>
         </div>
       </div>
-      <div class="flex-item-5">Flex Item 5</div>
-
-      <div class="flex-item-10">Flex Item 10</div>
     </div>
-
-    <script src="bookshelf.js"></script>
-    <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
+  </div>
+  </div>
+  <script src="bookshelf.js"></script>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
       }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
-  </body>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
 </html>
