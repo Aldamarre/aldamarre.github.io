@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=980, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bookshelf.css" />
+  <link rel="" stylesheeth" href="chat.css" />
+  <link rel="stylesheet" href=hover.css>
+  <link rel="stylesheet" href=pinterest.css>
+  <div class="crt"></div>
+</head>
+
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+  </style>
+  <div class="container1" style="height: 1000px;">
+    <div class="flex-item-1" style="width: 100%; height: fit-content;margin-left: 100px;margin-right: 100px;">
+      <div class="tab" style="
+            border-bottom-width: 1px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-top-width: 0px;
+          ">
+        <a href="index.html">
+        <button style="font-size: 17px; font-weight: bolder;">
+        <- Back
+        </button>
+        </a>
+        <button class="tablinks" onclick="openTab(event, 'Character-design')" id="defaultOpen">
+          Character-design
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Anatomy')">
+          Anatomy
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'People')">
+          People
+        </button>
+      </div>
+
+      <!-- Tab content -->
+
+      <div id="Character-design" class="tabcontent"
+        style="display: block; width: auto;  border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px;height: 850px;">
+        <iframe
+          src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/character-design&amp;hideHeader=1&amp;hideFooter=1&amp;transparent=1"
+          style="width:100%; height: 100%;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+      </div>
+
+      <div id="Anatomy" class="tabcontent"
+        style="display: block; width: auto; height: 800px; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px;margin-left: 40px;">
+        <iframe
+          src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/anatomy-art/&hideHeader=1&hideFooter=1&transparent=1"
+          style="width:100%; height: 100%;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+      </div>
+
+      <div id="People" class="tabcontent"
+        style="display: block; width: auto;  border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px;height: 850px;">
+        <iframe
+          src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/people/&hideHeader=1&hideFooter=1&transparent=1"
+          style=" width:100%; height: 100%;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+      </div>
+    </div>
+
+  
+    <script>
+      function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
