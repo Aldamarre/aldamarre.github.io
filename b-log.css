@@ -1,0 +1,30 @@
+.narrate {
+     border: 1px solid #392104;
+     padding: 10px;
+     margin: 10px;
+     background: linear-gradient(to bottom, rgb(181, 200, 237) 0%, rgba(181, 229, 237, 0.2) 100%);
+     box-shadow: 3px 3px #807e76;
+     color: #392104;
+}
+ .investigate {
+     border-left: 3px solid #303823;
+     padding: 10px;
+     margin: 10px;
+     background: linear-gradient(to right, rgba(195, 202, 182, 1) 0%, rgba(195, 202, 182, 0.2) 100%);
+     color: #303823;
+}
+ .narrate h5, .investigate h5 {
+     padding: 0px;
+     margin: 0px;
+     font-size: var(--font-size-14);
+}
+ .narrate h5 {
+     border-bottom: 2px solid #392104;
+}
+ .investigate h5 {
+     border-bottom: 2px solid #303823;
+}
+
+html{
+    scrollbar-width: thin;
+}

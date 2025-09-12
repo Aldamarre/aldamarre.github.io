@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=980, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bookshelf.css" />
+  <link rel="" stylesheeth" href="chat.css" />
+  <link rel="stylesheet" href=hover.css>
+  <div class="crt"></div>
+</head>
+
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+  </style>
+  <div class="container1">
+    <div class="flex-item-1">
+      <div class="tab" style="
+            border-bottom-width: 1px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-top-width: 0px;
+          ">
+        <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">
+          Home
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Blog')">
+          B-log
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Info')">
+          Info
+        </button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="Home" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+        <h1 class="homeheader" style="font-weight: 100;">Welcome</h1>
+        <p style="line-height: 2; font-size: 15px; font-weight: 500;">
+          Hello
+          Welcome to my website, where I post about my interests and hobbies, such as music, art, photography, and more.
+          This website was initially for a class assignment, but I've always been interested in making websites and
+          self-expression, so I decided to take this chance to improve my skills.
+          <br>
+          <br>
+          I hope you like it, enjoy!
+        </p>
+      </div>
+
+<div id="Blog" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+    <div class="iframe-container">
+        <iframe src="b-log.html" style="border: none; scrollbar-width: none;"></iframe>
+    </div>
+</div>
+
+<style>
+.iframe-container {
+  position: relative;
+  width: 100%;
+  /* This creates a 16:9 aspect ratio */
+  padding-bottom: 56.25%; 
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+      <div id="Info" class="tabcontent" style="
+            display: block;
+            width: auto;
+            height: auto;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+          ">
+      <div class="two-column-flex">
+  <div style="border: 2px solid black; padding: 10px;">
+    <h3>Socials</h3>
+    <p>instagram</p>
+    <p>pinterest</p>
+    <p>twitter</p>
+  </div>
+  <div style="border: 2px solid black; padding: 10px;">
+    <h3>siteMap</h3>
+<select name="Folders" id="folders-dropdown" style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;" required>
+  <option value="" disabled selected hidden>Folders</option>
+  <option value="/myGallery.html">myGallery</option>
+  <option value="/myPins.html">myPins</option>
+  <option value="/myStuff.html">myStuff</option>
+</select>
+<br>
+<br>
+<select name="Folders" id="folders-dropdown" style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;" required>
+  <option value="" disabled selected hidden>Bookshelf</option>
+  <option value="/myGallery.html">myGallery</option>
+  <option value="/myPins.html">myPins</option>
+  <option value="/myStuff.html">myStuff</option>
+</select>
+<script>
+  // Get the dropdown element
+  const dropdown = document.getElementById('folders-dropdown');
+
+  // Add an event listener for the 'change' event
+  dropdown.addEventListener('change', function() {
+    const selectedValue = this.value;
+
+    // Check if a value was selected (not the placeholder)
+    if (selectedValue) {
+      window.location.href = selectedValue;
+    }
+  });
+</script>
+  </div>
+  <div style="border: 2px solid black; padding: 10px;">
+    <h3>Resources</h3>
+    <div style="display: flex;
+    flex-wrap: wrap; justify-content: space-evenly;" ;>
+    <p>Scripted's Resources</p>
+
+    <p>Webdevin'</p>
+    &nbsp;
+    <p>maddycha</p>
+    &nbsp;
+    <p>W3Schools</p>
+    &nbsp;
+    <p>MDN Web Docs</p>
+    &nbsp;
+    <p>CSS-Tricks</p>
+    &nbsp;
+    <p>Stack Overflow</p>
+    &nbsp;
+    <p>Aero Tailles</p>
+    &nbsp;
+    <p>code snippets</p>
+    &nbsp;
+    <p>Google Fonts</p>
+    &nbsp;
+    <p>petracoding|pinterest</p>
+    &nbsp;
+    <p>Hover CSS</p>
+    &nbsp;
+    <p>Chatango</p>
+    &nbsp;
+    <p>Bookshelf CSS</p>
+    &nbsp;
+    <p>CRT effect</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="flex-item-2">
+      <div class="tab" style="
+            
+            margin-bottom: 0px;
+            border-left-width: 0px;
+            border-top-width: 0px;
+            border-right-width: 0px;
+                    position: relative;
+        z-index: 9;
+
+          ">
+        <button class="tablinks active" id="defaultOpen" style="        position: relative;
+        z-index: 9999;">MyChat</button>
+      </div>
+      <div style="height: 92%; margin-top: -7%; width: 100%;">
+<script id="cid0020000418594630234" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"aldamarr","arch":"js","styles":{"c":"000000","d":"000000","f":0,"i":0,"l":"FFFFFF","m":"FFFFFF","p":"11.88","usricon":0.83,"surl":0}}</script>
+      </div>
+
+    </div>
+  </div>
+  <div class="container2">
+
+    <div class="flex-item-3">
+      <!-- Added a class for styling -->
+      <div class="image-text-container">
+
+        <div href="#" class="hvr-bob" style="margin-top: 10px;">
+          <a href="myGallery.html" style="text-decoration: none;">
+          <img src="Books/folder-icon-macos.png">
+          <p>myGallery</p>
+          </a>
+        </div>
+
+
+
+        <div href="#" class="hvr-bob" style="margin-top: 10px;margin-left: -50px;margin-right: -50px;">
+          <a href="myPins.html" style="text-decoration: none;">
+            <img src="Books/folder-icon-macos.png">
+            <p>MyPins</p>
+          </a>
+        </div>
+
+        <div href="#" class="hvr-bob" style="margin-top: 10px;">
+          <img src="Books/folder-icon-macos.png">
+          <p>Stuff</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-item-4">Flex Item 4</div>
+
+    <div class="flex-item-5">Flex Item 5</div>
+  </div>
+  <div class="container3">
+    <div class="flex-item-6">
+      <div class="tab" style="
+            margin-bottom: 0px;
+            border-bottom-width: 1px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-top-width: 0px;
+          ">
+        <button class="tablinks active" id="defaultOpen">MyBooks</button>
+      </div>
+
+      <div class="bookshelf">
+        <div class="book">
+          <div class="side spine" style="
+                height: 269px;
+                top: 11px;
+                background-image: url('/Books/WOKSPINE.jpeg');
+                background-color: brown;
+              ">
+            <img src="/Books/WOKSPINE.jpeg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 11px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 269px;
+                top: 11px;
+                background-image: url('/Books/twok.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/7235533-the-way-of-kings;'"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 238px;
+                top: 42px;
+                background-image: var(--pyramid);
+                background-color: maroon;
+              ">
+            <!-- removed spine-title and spine-author -->
+            <img src="/Books/WORSPINE.jpg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 42px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 238px;
+                top: 42px;
+                background-image: url('/Books/wor.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/17332218-words-of-radiance';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 250px;
+                top: 30px;
+                background-image: var(--pyramid);
+                background-color: saddlebrown;
+              ">
+            <img src="/Books/OBSPINE.jpeg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 30px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 250px;
+                top: 30px;
+                background-image: url('/Books/oathbringer.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/34002132-oathbringer';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 224px;
+                top: 56px;
+                background-image: var(--argyle);
+                background-color: darkgreen;
+              ">
+            <img src="/Books/ROWSPINE.jpg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 56px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 224px;
+                top: 56px;
+                background-image: url('/Books/row.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/49021976-rhythm-of-war';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 287px;
+                top: -7px;
+                background-image: var(--tartan);
+                background-color: midnightblue;
+              ">
+            <img src="/Books/WATSPINE.jpeg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: -7px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 287px;
+                top: -7px;
+                background-image: url('/Books/wat.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/203578847-wind-and-truth';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 225px;
+                top: 55px;
+                background-image: var(--stairs);
+                background-color: maroon;
+              ">
+            <img src="/Books/MBFESPINE.jpg" height="100%" width="100%" />
+          </div>
+          <div class="side top" style="top: 55px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 225px;
+                top: 55px;
+                background-image: url('/Books/mtfe.jpg');
+              " onclick="window.location='https://www.goodreads.com/book/show/68428.Mistborn';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 236px;
+                top: 44px;
+                background-image: var(--stairs);
+                background-color: saddlebrown;
+              ">
+            <img src="/Books/RRSPINE.jpg" height="100%" width="100%" />
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 44px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 236px;
+                top: 44px;
+                background-image: url('/Books/redrising.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=Rhythm of War';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 231px;
+                top: 49px;
+                background-image: var(--argyle);
+                background-color: midnightblue;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 49px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 231px;
+                top: 49px;
+                background-image: url('/static/img/bookshelf/48.png');
+              " onclick="window.location='https://www.goodreads.com/search?q=Oathbringer';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 275px;
+                top: 5px;
+                background-image: var(--argyle);
+                background-color: saddlebrown;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 5px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 275px;
+                top: 5px;
+                background-image: url('/static/img/bookshelf/47.png');
+              " onclick="window.location='https://www.goodreads.com/search?q=Words Of Radiance';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 252px;
+                top: 28px;
+                background-image: var(--argyle);
+                background-color: darkgreen;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 28px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 252px;
+                top: 28px;
+                background-image: url('/static/img/bookshelf/46.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=The Way Of Kings';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 234px;
+                top: 46px;
+                background-image: var(--pyramid);
+                background-color: midnightblue;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 46px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 234px;
+                top: 46px;
+                background-image: url('/static/img/bookshelf/45.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=The Wise Man\'s Fear';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 239px;
+                top: 41px;
+                background-image: var(--argyle);
+                background-color: midnightblue;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 41px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 239px;
+                top: 41px;
+                background-image: url('/static/img/bookshelf/44.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=The Name Of The Wind';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 223px;
+                top: 57px;
+                background-image: var(--argyle);
+                background-color: darkgreen;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: 57px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 223px;
+                top: 57px;
+                background-image: url('/static/img/bookshelf/43.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=Cloud Atlas';"></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine" style="
+                height: 284px;
+                top: -4px;
+                background-image: var(--argyle);
+                background-color: saddlebrown;
+              ">
+            <!-- removed spine-title and spine-author -->
+          </div>
+          <div class="side top" style="top: -4px"></div>
+          <div class="side cover" style="
+                cursor: pointer;
+                height: 284px;
+                top: -4px;
+                background-image: url('/static/img/bookshelf/42.jpg');
+              " onclick="window.location='https://www.goodreads.com/search?q=Fight Club';"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="bookshelf.js"></script>
+  <script>
+    function openTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
+</html>
