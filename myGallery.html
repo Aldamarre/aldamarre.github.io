@@ -27,9 +27,13 @@ html{
 
   }
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+  display: flex; /* Make the body a flex container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
 
   .header {
     text-align: left;
@@ -53,6 +57,7 @@ button{
     /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
+    background-color: #f1f1f1;
   }
 
   /* Create four equal columns that sits next to each other */
@@ -68,13 +73,12 @@ button{
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    border-radius: 20px;
-    
+  
   }
 
   img{
     
-    border: 1.5px solid #000000;
+    border: 2px solid #000000;
   }
 
 
@@ -100,6 +104,7 @@ button{
 <body>
 
   <!-- Header -->
+   <div class="flex-item-1" style="width: 60%; height: fit-content;margin-left: 100px;margin-right: 100px;">
       <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
@@ -116,9 +121,10 @@ button{
         </button>
 
       </div>
+      
 
 
- <!-- Photo Grid -->
+<!-- Photo Grid -->
 <div class="row">
   <div class="column">
     <img src="/myGallery/image.webp"  loading="lazy" alt="Description of image 1">
@@ -156,9 +162,6 @@ button{
   </div>
 </div>
 
-
 </body>
 
-
 </html>
-

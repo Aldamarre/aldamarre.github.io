@@ -13,6 +13,61 @@
   <link rel="" stylesheeth" href="chat.css" />
   <link rel="stylesheet" href=hover.css>
   <div class="crt"></div>
+  <style>
+    body,
+    html {
+      overflow-x: hidden
+    }
+
+    lol,
+    .img2 {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      background-color: black;
+      color: black;
+      z-index: 999;
+    }
+
+    .img1 {
+      position: absolute;
+      width: auto;
+      height: 180px;
+      left: 120px;
+      z-index: 800;
+      /* Start with the animation paused */
+      animation-play-state: paused;
+    }
+
+    .img1.active {
+      /* Use '.active' instead of '.clicked' for clarity */
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+      /* Resume animation when class is added */
+      animation-play-state: running;
+    }
+
+    @-moz-keyframes spin {
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -59,7 +114,7 @@
         </p>
       </div>
 
-<div id="Blog" class="tabcontent" style="
+      <div id="Blog" class="tabcontent" style="
             display: block;
             width: auto;
             height: auto;
@@ -67,28 +122,28 @@
             border-left-width: 0px;
             border-right-width: 0px;
           ">
-    <div class="iframe-container">
-        <iframe src="b-log.html" style="border: none; scrollbar-width: none;"></iframe>
-    </div>
-</div>
+          <p style="margin-top: 0px; margin-bottom: 0px; text-align: center;">this is sorted as newest on top oldest at the bottom</p>
+        <div class="iframe-container">
+          <iframe src="b-log.html" style=" border: none; scrollbar-width: none;"></iframe>
+        </div>
+      </div>
 
-<style>
-.iframe-container {
-  position: relative;
-  width: 100%;
-  /* This creates a 16:9 aspect ratio */
-  padding-bottom: 56.25%; 
-  overflow: hidden;
-}
+      <style>
+        .iframe-container {
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%;
+          overflow: hidden;
+        }
 
-.iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
+        .iframe-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
 
       <div id="Info" class="tabcontent" style="
             display: block;
@@ -98,80 +153,124 @@
             border-left-width: 0px;
             border-right-width: 0px;
           ">
-      <div class="two-column-flex">
-  <div style="border: 2px solid black; padding: 10px;">
-    <h3>Socials</h3>
-    <p>instagram</p>
-    <p>pinterest</p>
-    <p>twitter</p>
-  </div>
-  <div style="border: 2px solid black; padding: 10px;">
-    <h3>siteMap</h3>
-<select name="Folders" id="folders-dropdown" style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;" required>
-  <option value="" disabled selected hidden>Folders</option>
-  <option value="/myGallery.html">myGallery</option>
-  <option value="/myPins.html">myPins</option>
-  <option value="/myStuff.html">myStuff</option>
-</select>
-<br>
-<br>
-<select name="Folders" id="folders-dropdown" style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;" required>
-  <option value="" disabled selected hidden>Bookshelf</option>
-  <option value="/myGallery.html">myGallery</option>
-  <option value="/myPins.html">myPins</option>
-  <option value="/myStuff.html">myStuff</option>
-</select>
-<script>
-  // Get the dropdown element
-  const dropdown = document.getElementById('folders-dropdown');
+        <div class="two-column-flex">
+          <div style="border: 1px solid black; padding: 10px; background-color: #f5f5f5;">
+            <h3>Socials</h3>
+            <p>instagram</p>
+            <p>pinterest</p>
+            <p>twitter</p>
+          </div>
+          <div style="border: 1px solid black; padding: 10px;background-color: #f5f5f5;">
+            <h3>siteMap</h3>
+            <select name="Folders" id="folders-dropdown"
+              style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;"
+              required>
+              <option value="" disabled selected hidden>Folders</option>
+              <option value="/myGallery.html">myGallery</option>
+              <option value="/myPins.html">myPins</option>
+              <option value="/myStuff.html">myStuff</option>
+            </select>
+            <br>
+            <br>
+            <select name="Folders" id="folders-dropdown"
+              style="border: 1px solid #000000; border-radius: 1px; padding: 10px; font-size: 17px; background-color: #ededed; cursor: pointer;"
+              required>
+              <option value="" disabled selected hidden>Bookshelf</option>
+              <option value="/myGallery.html">myGallery</option>
+              <option value="/myPins.html">myPins</option>
+              <option value="/myStuff.html">myStuff</option>
+            </select>
+            <script>
+              // Get the dropdown element
+              const dropdown = document.getElementById('folders-dropdown');
 
-  // Add an event listener for the 'change' event
-  dropdown.addEventListener('change', function() {
-    const selectedValue = this.value;
+              // Add an event listener for the 'change' event
+              dropdown.addEventListener('change', function () {
+                const selectedValue = this.value;
 
-    // Check if a value was selected (not the placeholder)
-    if (selectedValue) {
-      window.location.href = selectedValue;
-    }
-  });
-</script>
-  </div>
-  <div style="border: 2px solid black; padding: 10px;">
-    <h3>Resources</h3>
-    <div style="display: flex;
+                // Check if a value was selected (not the placeholder)
+                if (selectedValue) {
+                  window.location.href = selectedValue;
+                }
+              });
+            </script>
+          </div>
+          <style>
+            a:hover {
+              font-weight: bold;
+            }
+          </style>
+          <div style="border: 1px solid black; padding: 10px; background-color: #f5f5f5;">
+            <h3>Resources</h3>
+            <div style="display: flex;
     flex-wrap: wrap; justify-content: space-evenly;" ;>
-    <p>Scripted's Resources</p>
-
-    <p>Webdevin'</p>
-    &nbsp;
-    <p>maddycha</p>
-    &nbsp;
-    <p>W3Schools</p>
-    &nbsp;
-    <p>MDN Web Docs</p>
-    &nbsp;
-    <p>CSS-Tricks</p>
-    &nbsp;
-    <p>Stack Overflow</p>
-    &nbsp;
-    <p>Aero Tailles</p>
-    &nbsp;
-    <p>code snippets</p>
-    &nbsp;
-    <p>Google Fonts</p>
-    &nbsp;
-    <p>petracoding|pinterest</p>
-    &nbsp;
-    <p>Hover CSS</p>
-    &nbsp;
-    <p>Chatango</p>
-    &nbsp;
-    <p>Bookshelf CSS</p>
-    &nbsp;
-    <p>CRT effect</p>
-    </div>
-  </div>
-</div>
+              <a href="https://scripted.neocities.org/" style="display: block; 
+  color: inherit;">
+                <p>Scripted's Resources</p>
+              </a>
+              &nbsp;
+              <a href="https://webdev.yay.boo/#old" style="display: block; 
+  color: inherit;">
+                <p style>Webdevin'</p>
+              </a>
+              &nbsp;
+              <a href="https://maddycha.com/" style="display: block; 
+  color: inherit;">
+                <p>maddycha</p>
+              </a>
+              &nbsp;
+              <a href="https://www.w3schools.com/howto/default.asp" style="display: block; 
+  color: inherit;">
+                <p>W3Schools</p>
+              </a>
+              &nbsp;
+              <a href="https://codeshack.io/css-flexbox-generator/" style="display: block; 
+  color: inherit;">
+                <p>CSS-Flexbox Generator</p>
+              </a>
+              &nbsp;
+              <a href="https://stackoverflow.com/questions" style="display: block; 
+  color: inherit;">
+                <p>Stack Overflow</p>
+              </a>
+              &nbsp;
+              <a href="https://www.rw-designer.com/cursor-set/aero-tailles-shadow-big-sized" style="display: block; 
+  color: inherit;">
+                <p>Aero Tailles</p>
+              </a>
+              &nbsp;
+              <a href="https://fonts.google.com/selection/embed" style="display: block; 
+  color: inherit;">
+                <p>Google Fonts</p>
+              </a>
+              &nbsp;
+              <a href="https://petracoding.github.io/pinterest/" style="display: block; 
+  color: inherit;">
+                <p>petracoding|pinterest</p>
+              </a>
+              &nbsp;
+              <a href="https://ianlunn.github.io/Hover/" style="display: block; 
+  color: inherit;">
+                <p>Hover CSS</p>
+              </a>
+              &nbsp;
+              <a href="https://chatango.com/" style="display: block; 
+  color: inherit;">
+                <p>Chatango</p>
+              </a>
+              &nbsp;
+              <a href="https://janhendrikewers.uk/bookshelf_for_personal_website" style="display: block;
+  color: inherit;">
+                <p>Bookshelf CSS</p>
+              </a>
+              &nbsp;
+              <a href="https://aleclownes.com/2017/02/01/crt-display.html" style="display: block; 
+  color: inherit;">
+                <p>CRT effect</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex-item-2">
@@ -189,43 +288,179 @@
         z-index: 9999;">MyChat</button>
       </div>
       <div style="height: 92%; margin-top: -7%; width: 100%;">
-<script id="cid0020000418594630234" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"aldamarr","arch":"js","styles":{"c":"000000","d":"000000","f":0,"i":0,"l":"FFFFFF","m":"FFFFFF","p":"11.88","usricon":0.83,"surl":0}}</script>
+        <script id="cid0020000418594630234" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js"
+          style="width: 100%;height: 100%;">{ "handle": "aldamarr", "arch": "js", "styles": { "c": "000000", "d": "000000", "f": 0, "i": 0, "l": "FFFFFF", "m": "FFFFFF", "p": "11.88", "usricon": 0.83, "surl": 0 } }</script>
       </div>
 
     </div>
   </div>
   <div class="container2">
 
-    <div class="flex-item-3">
+    <div class="flex-item-3" style="  width: 459px;
+">
       <!-- Added a class for styling -->
       <div class="image-text-container">
 
-        <div href="#" class="hvr-bob" style="margin-top: 10px;">
+        <div href="#" class="hvr-bob" style="margin-top: 4px;">
           <a href="myGallery.html" style="text-decoration: none;">
-          <img src="Books/folder-icon-macos.png">
-          <p>myGallery</p>
+            <img src="Books/folder-icon-macos.png">
+            <p>myGallery</p>
           </a>
         </div>
 
 
 
-        <div href="#" class="hvr-bob" style="margin-top: 10px;margin-left: -50px;margin-right: -50px;">
+        <div href="#" class="hvr-bob" style="margin-top: 4px;margin-left: -50px;margin-right: -50px;">
           <a href="myPins.html" style="text-decoration: none;">
             <img src="Books/folder-icon-macos.png">
             <p>MyPins</p>
           </a>
         </div>
 
-        <div href="#" class="hvr-bob" style="margin-top: 10px;">
+        <div href="#" class="hvr-bob" style="margin-top: 4px;">
           <img src="Books/folder-icon-macos.png">
-          <p>Stuff</p>
+          <p>myStuff</p>
         </div>
       </div>
     </div>
 
-    <div class="flex-item-4">Flex Item 4</div>
+    <div class="flex-item-4" style="  width: 151px;
+">
+      <div id="lol"><img class="img2" data-target="img1"
+          src="https://vgmsite.com/soundtracks/animal-crossing-new-horizons-2020-switch-gamerip/Cover_Alt.jpg"
+          style="height: 100px;width: 100px;"><img id="myImage" class="img1"
+          src="https://web.archive.org/web/20220514070535im_/https://cdn.discordapp.com/attachments/822589056256311328/890714753780031488/image0.png"
+          style="margin-left: -50px; position: static;width: 100px;height: 100px;">
+      </div>
+      <audio id="audio" src="https://files.catbox.moe/nwewpp.mp3"></audio>
+      <script>
+ // Get a reference to the image elements and the audio element
+  const img2 = document.querySelector('.img2');
+  const img1 = document.getElementById('myImage');
+  const audio = document.getElementById('audio');
 
-    <div class="flex-item-5">Flex Item 5</div>
+  // --- Functions to save and load state using localStorage ---
+
+  function savePlaybackState() {
+    localStorage.setItem('audio_playback_time', audio.currentTime);
+    localStorage.setItem('audio_is_playing', !audio.paused);
+    localStorage.setItem('audio_volume', audio.volume);
+  }
+
+  function loadPlaybackState() {
+    const savedTime = localStorage.getItem('audio_playback_time');
+    const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
+    const savedVolume = localStorage.getItem('audio_volume');
+
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    if (savedVolume) {
+      audio.volume = parseFloat(savedVolume);
+    }
+
+    // If music was playing before reload, try to resume it.
+    if (wasPlaying) {
+      const tryToPlay = () => {
+        audio.play().catch(e => {
+          console.log("Autoplay was prevented. User must click to resume playback.");
+          img1.classList.add('active');
+        });
+      };
+
+      if (document.visibilityState === 'visible') {
+        tryToPlay();
+      } else {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') {
+            tryToPlay();
+          }
+        }, { once: true });
+      }
+    }
+  }
+
+  // --- Event Listeners ---
+
+  // Listen for clicks on img2 to toggle audio and animation
+  img2.addEventListener('click', function () {
+    img1.classList.toggle('active');
+
+    if (img1.classList.contains('active')) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+
+  // Update the saved playback state regularly while the audio is playing
+  audio.addEventListener('timeupdate', savePlaybackState);
+
+  // Clear storage when the track ends
+  audio.addEventListener('ended', () => {
+    localStorage.removeItem('audio_playback_time');
+    localStorage.removeItem('audio_is_playing');
+    img1.classList.remove('active');
+  });
+
+  // Listen for the 'wheel' event on the entire window
+  window.addEventListener('wheel', function (event) {
+    if (img2.contains(event.target)) {
+      event.preventDefault();
+
+      if (event.deltaY < 0) {
+        if (audio.volume < 1.0) audio.volume += 0.1;
+      } else if (event.deltaY > 0) {
+        if (audio.volume > 0.0) audio.volume -= 0.1;
+      }
+      localStorage.setItem('audio_volume', audio.volume);
+      console.log("New volume: ", audio.volume);
+    }
+  });
+
+  // --- Page Navigation and Visibility ---
+
+  window.addEventListener('beforeunload', () => {
+    if (!audio.paused) {
+      savePlaybackState();
+    } else {
+      localStorage.removeItem('audio_playback_time');
+      localStorage.removeItem('audio_is_playing');
+    }
+  });
+
+  // **Updated:** Listen for visibility changes on the document
+  document.addEventListener('visibilitychange', function () {
+    // Check if the music was playing *before* the tab became hidden
+    const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
+
+    if (document.visibilityState === 'hidden') {
+      // We only pause if the user is explicitly controlling it,
+      // otherwise we assume they want background audio.
+      // However, we must pause the animation to save resources.
+      img1.classList.remove('active');
+    } else {
+      // If the music was playing and we return, reactivate the animation.
+      if (wasPlaying) {
+        img1.classList.add('active');
+        // The audio playback will automatically continue in the background
+        // without needing to be toggled again here.
+      }
+    }
+  });
+
+
+  // Initial page load logic
+  document.addEventListener('DOMContentLoaded', () => {
+    loadPlaybackState();
+  });
+
+      </script>
+    </div>
+
+    <div class="flex-item-5" style="  width: 260px;
+">Flex Item 5</div>
   </div>
   <div class="container3">
     <div class="flex-item-6">
@@ -242,264 +477,267 @@
       <div class="bookshelf">
         <div class="book">
           <div class="side spine" style="
-                height: 269px;
-                top: 11px;
-                background-image: url('/Books/WOKSPINE.jpeg');
-                background-color: brown;
-              ">
+                      height: 269px;
+                      top: 11px;
+                      background-image: url('/Books/WOKSPINE.jpeg');
+                      background-color: brown;
+                    ">
             <img src="/Books/WOKSPINE.jpeg" height="100%" width="100%" />
           </div>
           <div class="side top" style="top: 11px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 269px;
-                top: 11px;
-                background-image: url('/Books/twok.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/7235533-the-way-of-kings;'"></div>
+                      cursor: pointer;
+                      height: 269px;
+                      top: 11px;
+                      background-image: url('/Books/twok.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/7235533-the-way-of-kings;'"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 238px;
-                top: 42px;
-                background-image: var(--pyramid);
-                background-color: maroon;
-              ">
+                      height: 238px;
+                      top: 42px;
+                      background-image: var(--pyramid);
+                      background-color: maroon;
+                    ">
             <!-- removed spine-title and spine-author -->
             <img src="/Books/WORSPINE.jpg" height="100%" width="100%" />
           </div>
           <div class="side top" style="top: 42px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 238px;
-                top: 42px;
-                background-image: url('/Books/wor.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/17332218-words-of-radiance';"></div>
+                      cursor: pointer;
+                      height: 238px;
+                      top: 42px;
+                      background-image: url('/Books/wor.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/17332218-words-of-radiance';">
+          </div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 250px;
-                top: 30px;
-                background-image: var(--pyramid);
-                background-color: saddlebrown;
-              ">
+                      height: 250px;
+                      top: 30px;
+                      background-image: var(--pyramid);
+                      background-color: saddlebrown;
+                    ">
             <img src="/Books/OBSPINE.jpeg" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 30px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 250px;
-                top: 30px;
-                background-image: url('/Books/oathbringer.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/34002132-oathbringer';"></div>
+                      cursor: pointer;
+                      height: 250px;
+                      top: 30px;
+                      background-image: url('/Books/oathbringer.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/34002132-oathbringer';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 224px;
-                top: 56px;
-                background-image: var(--argyle);
-                background-color: darkgreen;
-              ">
+                      height: 224px;
+                      top: 56px;
+                      background-image: var(--argyle);
+                      background-color: darkgreen;
+                    ">
             <img src="/Books/ROWSPINE.jpg" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 56px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 224px;
-                top: 56px;
-                background-image: url('/Books/row.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/49021976-rhythm-of-war';"></div>
+                      cursor: pointer;
+                      height: 224px;
+                      top: 56px;
+                      background-image: url('/Books/row.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/49021976-rhythm-of-war';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 287px;
-                top: -7px;
-                background-image: var(--tartan);
-                background-color: midnightblue;
-              ">
+                      height: 287px;
+                      top: -7px;
+                      background-image: var(--tartan);
+                      background-color: midnightblue;
+                    ">
             <img src="/Books/WATSPINE.jpeg" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: -7px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 287px;
-                top: -7px;
-                background-image: url('/Books/wat.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/203578847-wind-and-truth';"></div>
+                      cursor: pointer;
+                      height: 287px;
+                      top: -7px;
+                      background-image: url('/Books/wat.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/203578847-wind-and-truth';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 225px;
-                top: 55px;
-                background-image: var(--stairs);
-                background-color: maroon;
-              ">
+                      height: 225px;
+                      top: 55px;
+                      background-image: var(--stairs);
+                      background-color: maroon;
+                    ">
             <img src="/Books/MBFESPINE.jpg" height="100%" width="100%" />
           </div>
           <div class="side top" style="top: 55px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 225px;
-                top: 55px;
-                background-image: url('/Books/mtfe.jpg');
-              " onclick="window.location='https://www.goodreads.com/book/show/68428.Mistborn';"></div>
+                      cursor: pointer;
+                      height: 225px;
+                      top: 55px;
+                      background-image: url('/Books/mtfe.jpg');
+                    " onclick="window.location='https://www.goodreads.com/book/show/68428.Mistborn';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 236px;
-                top: 44px;
-                background-image: var(--stairs);
-                background-color: saddlebrown;
-              ">
-            <img src="/Books/RRSPINE.jpg" height="100%" width="100%" />
+                      height: 236px;
+                      top: 44px;
+                      background-image: var(--stairs);
+                      background-color: saddlebrown;
+                    ">
+            <img src="/Books/RRSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 44px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 236px;
-                top: 44px;
-                background-image: url('/Books/redrising.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=Rhythm of War';"></div>
+                      cursor: pointer;
+                      height: 236px;
+                      top: 44px;
+                      background-image: url('/Books/redrising.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=Rhythm of War';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 231px;
-                top: 49px;
-                background-image: var(--argyle);
-                background-color: midnightblue;
-              ">
-              <img src="/Books/GSSPINE.png" height="100%" width="100%" />
+                      height: 231px;
+                      top: 49px;
+                      background-image: var(--argyle);
+                      background-color: midnightblue;
+                    ">
+            <img src="/Books/GSSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 49px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 231px;
-                top: 49px;
-                background-image: url('/Books/goldenson.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=Golden+son';"></div>
+                      cursor: pointer;
+                      height: 231px;
+                      top: 49px;
+                      background-image: url('/Books/goldenson.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=Golden+son';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 275px;
-                top: 5px;
-                background-image: var(--argyle);
-                background-color: saddlebrown;
-              ">
-              <img src="/Books/MSSPINE.png" height="100%" width="100%" />
+                      height: 275px;
+                      top: 5px;
+                      background-image: var(--argyle);
+                      background-color: saddlebrown;
+                    ">
+            <img src="/Books/MSSSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 5px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 275px;
-                top: 5px;
-                background-image: url('/Books/morningstar.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=Words Of Radiance';"></div>
+                      cursor: pointer;
+                      height: 275px;
+                      top: 5px;
+                      background-image: url('/Books/morningstar.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=Words Of Radiance';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 252px;
-                top: 28px;
-                background-image: var(--argyle);
-                background-color: darkgreen;
-              ">
-                            <img src="/Books/IGSPINE.png" height="100%" width="100%" />
+                      height: 252px;
+                      top: 28px;
+                      background-image: var(--argyle);
+                      background-color: darkgreen;
+                    ">
+            <img src="/Books/IGSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 28px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 252px;
-                top: 28px;
-                background-image: url('/Books/irongold.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=The Way Of Kings';"></div>
+                      cursor: pointer;
+                      height: 252px;
+                      top: 28px;
+                      background-image: url('/Books/irongold.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=The Way Of Kings';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 234px;
-                top: 46px;
-                background-image: var(--pyramid);
-                background-color: midnightblue;
-              ">
-              <img src="/Books/DASPINE.png" height="100%" width="100%" />
+                      height: 234px;
+                      top: 46px;
+                      background-image: var(--pyramid);
+                      background-color: midnightblue;
+                    ">
+            <img src="/Books/DASPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 46px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 234px;
-                top: 46px;
-                background-image: url('/Books/darkage.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=The Wise Man\'s Fear';"></div>
+                      cursor: pointer;
+                      height: 234px;
+                      top: 46px;
+                      background-image: url('/Books/darkage.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=The Wise Man\'s Fear';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 239px;
-                top: 41px;
-                background-image: var(--argyle);
-                background-color: midnightblue;
-              ">
+                      height: 239px;
+                      top: 41px;
+                      background-image: var(--argyle);
+                      background-color: midnightblue;
+                    ">
+            <img src="/Books/LBSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 41px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 239px;
-                top: 41px;
-                background-image: url('/Books/lightbringer.png');
-              " onclick="window.location='https://www.goodreads.com/search?q=The Name Of The Wind';"></div>
+                      cursor: pointer;
+                      height: 239px;
+                      top: 41px;
+                      background-image: url('/Books/lightbringer.png');
+                    " onclick="window.location='https://www.goodreads.com/search?q=The Name Of The Wind';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 223px;
-                top: 57px;
-                background-image: var(--argyle);
-                background-color: darkgreen;
-              ">
+                      height: 223px;
+                      top: 57px;
+                      background-image: var(--argyle);
+                      background-color: darkgreen;
+                    ">
+            <img src="/Books/TWOTMSPINE.JPEG" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 57px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 223px;
-                top: 57px;
-                background-image: url('/Books/twotm.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=Cloud Atlas';"></div>
+                      cursor: pointer;
+                      height: 223px;
+                      top: 57px;
+                      background-image: url('/Books/twotm.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=Cloud Atlas';"></div>
         </div>
 
         <div class="book">
           <div class="side spine" style="
-                height: 284px;
-                top: -4px;
-                background-image: var(--argyle);
-                background-color: saddlebrown;
-              ">
-                            <img src="/Books/EOSSPINE.png" height="100%" width="100%" />
+                      height: 284px;
+                      top: -4px;
+                      background-image: var(--argyle);
+                      background-color: saddlebrown;
+                    ">
+            <img src="/Books/EOSSPINE.png" height="100%" width="100%" />
             <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: -4px"></div>
           <div class="side cover" style="
-                cursor: pointer;
-                height: 284px;
-                top: -4px;
-                background-image: url('/Books/suneater.jpg');
-              " onclick="window.location='https://www.goodreads.com/search?q=Fight Club';"></div>
+                      cursor: pointer;
+                      height: 284px;
+                      top: -4px;
+                      background-image: url('/Books/suneater.jpg');
+                    " onclick="window.location='https://www.goodreads.com/search?q=Fight Club';"></div>
         </div>
       </div>
     </div>
@@ -525,6 +763,5 @@
     document.getElementById("defaultOpen").click();
   </script>
 </body>
-
 
 </html>
