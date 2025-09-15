@@ -29,10 +29,10 @@ html{
 
 body {
   margin: 0;
-  display: flex; /* Make the body a flex container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
   .header {
@@ -51,19 +51,28 @@ button{
 
   .row {
     display: -ms-flexbox;
-    /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap;
-    /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;
     background-color: #f1f1f1;
   }
+.preview {
+      height: 400px;
+      width: 50%;
+      background-color: #cacaca;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  /* Create four equal columns that sits next to each other */
+    .preview #preview-img {
+      max-width: 100%;
+      max-height: 100%; 
+      object-fit: contain;
+    }
+
   .column {
     -ms-flex: 25%;
-    /* IE10 */
     flex: 25%;
     max-width: 10%;
     padding: 0 4px;
@@ -76,13 +85,18 @@ button{
   
   }
 
+.column img:hover {
+      border-style:dotted;
+      border-color: rgb(0, 132, 255);
+    }
+
+
   img{
     
-    border: 2px solid #000000;
+    border: 1px solid #000000;
   }
 
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       -ms-flex: 50%;
@@ -91,7 +105,7 @@ button{
     }
   }
 
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
   @media screen and (max-width: 600px) {
     .column {
       -ms-flex: 100%;
@@ -122,17 +136,24 @@ button{
 
       </div>
       
-
+<!--PREVIEW PANEL-->
+<div style="padding: 10px; display: right;" >
 
 <!-- Photo Grid -->
 <div class="row">
+
+  <div class="preview" style="height: auto; width: 50%; background-color: #f1f1f1;">
+<img id="preview-img" style="width: 100%; border: 2px solid;"></img>
+</div>
+
+
   <div class="column">
-    <img src="/myGallery/image.webp"  loading="lazy" alt="Description of image 1">
-    <img src="/myGallery/IMG_0048.webp"  loading="lazy" alt="Description of image 2">
-    <img src="/myGallery/IMG_1704.webp"  loading="lazy" alt="Description of image 3">
-    <img src="/myGallery/IMG_1711.webp"  loading="lazy" alt="Description of image 4">
-    <img src="/myGallery/IMG_1705.webp"  loading="lazy" alt="Description of image 5">
-    <img src="/myGallery/IMG_8461.webp"  loading="lazy" alt="Description of image 6">
+  <img src="/myGallery/image.webp" loading="lazy" alt="Description of image 1">
+  <img src="/myGallery/IMG_0048.webp" loading="lazy" alt="Description of image 2">
+  <img src="/myGallery/IMG_1704.webp" loading="lazy" alt="Description of image 3">
+  <img src="/myGallery/IMG_1711.webp" loading="lazy" alt="Description of image 4">
+  <img src="/myGallery/IMG_1705.webp" loading="lazy" alt="Description of image 5">
+  <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6">
   </div>
   <div class="column">
     <img src="/myGallery/IMG_0790.webp"  loading="lazy" alt="Description of image 7">
@@ -159,9 +180,36 @@ button{
     <img src="/myGallery/IMG_9100.webp"  loading="lazy" alt="Description of image 24">
     <img src="/myGallery/IMG_8131.webp"  loading="lazy" alt="Description of image 25">
     <img src="/myGallery/IMG_1011.webp"  loading="lazy" alt="Description of image 26">
+</div>
+  <div class="column">
+    <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21">
+    <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22">
+    <img src="/myGallery/IMG_2832.webp" loading="lazy" alt="Description of image 23">
+    <img src="/myGallery/IMG_9100.webp" loading="lazy" alt="Description of image 24">
+    <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25">
+    <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26">
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
 
+    const thumbnails = document.querySelectorAll('.column img');
+
+    const previewImg = document.getElementById('preview-img');
+
+    if (thumbnails.length > 0) {
+      previewImg.src = thumbnails[0].src;
+    }
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', (event) => {
+        const clickedImageSrc = event.target.src;
+        previewImg.src = clickedImageSrc;
+      });
+    });
+  });
+</script>
+</div>
 </body>
 
 </html>

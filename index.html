@@ -35,16 +35,13 @@
       height: 180px;
       left: 120px;
       z-index: 800;
-      /* Start with the animation paused */
       animation-play-state: paused;
     }
 
     .img1.active {
-      /* Use '.active' instead of '.clicked' for clarity */
       -webkit-animation: spin 4s linear infinite;
       -moz-animation: spin 4s linear infinite;
       animation: spin 4s linear infinite;
-      /* Resume animation when class is added */
       animation-play-state: running;
     }
 
@@ -65,6 +62,46 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
       }
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #686868c5;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #6b6b6b transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
     }
   </style>
 
@@ -93,7 +130,6 @@
         </button>
       </div>
 
-      <!-- Tab content -->
       <div id="Home" class="tabcontent" style="
             display: block;
             width: auto;
@@ -122,7 +158,8 @@
             border-left-width: 0px;
             border-right-width: 0px;
           ">
-          <p style="margin-top: 0px; margin-bottom: 0px; text-align: center;">this is sorted as newest on top oldest at the bottom</p>
+        <p style="margin-top: 0px; margin-bottom: 0px; text-align: center;">this is sorted as newest on top oldest at
+          the bottom</p>
         <div class="iframe-container">
           <iframe src="b-log.html" style=" border: none; scrollbar-width: none;"></iframe>
         </div>
@@ -145,20 +182,23 @@
         }
       </style>
 
-      <div id="Info" class="tabcontent" style="
-            display: block;
-            width: auto;
-            height: auto;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-          ">
+      <div id="Info" class="tabcontent"
+        style="display: block; width: auto; height: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px;padding-left: 20px;padding-right: 20px;padding-top: 20px;">
         <div class="two-column-flex">
           <div style="border: 1px solid black; padding: 10px; background-color: #f5f5f5;">
             <h3>Socials</h3>
-            <p>instagram</p>
-            <p>pinterest</p>
-            <p>twitter</p>
+            <a href="https://www.instagram.com/biroxec/" target="_blank" style="display: block; 
+                color: inherit;">
+              <p>instagram</p>
+            </a>
+            <a href="https://pin.it/Stpqip6Xv" target="_blank" style="display: block; 
+                              color: inherit;">
+              <p>pinterest</p>
+            </a>
+            <a href="https://github.com/Aldamarre" target="_blank" style="display: block; 
+                              color: inherit;">
+              <p>github</p>
+            </a>
           </div>
           <div style="border: 1px solid black; padding: 10px;background-color: #f5f5f5;">
             <h3>siteMap</h3>
@@ -181,14 +221,11 @@
               <option value="/myStuff.html">myStuff</option>
             </select>
             <script>
-              // Get the dropdown element
               const dropdown = document.getElementById('folders-dropdown');
 
-              // Add an event listener for the 'change' event
               dropdown.addEventListener('change', function () {
                 const selectedValue = this.value;
 
-                // Check if a value was selected (not the placeholder)
                 if (selectedValue) {
                   window.location.href = selectedValue;
                 }
@@ -201,70 +238,70 @@
             }
           </style>
           <div style="border: 1px solid black; padding: 10px; background-color: #f5f5f5;">
-            <h3>Resources</h3>
+            <h3 style="margin-bottom: 0px" ;>Resources</h3>
             <div style="display: flex;
     flex-wrap: wrap; justify-content: space-evenly;" ;>
-              <a href="https://scripted.neocities.org/" style="display: block; 
+              <a href="https://scripted.neocities.org/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Scripted's Resources</p>
               </a>
               &nbsp;
-              <a href="https://webdev.yay.boo/#old" style="display: block; 
+              <a href="https://webdev.yay.boo/#old" target="_blank" style="display: block; 
   color: inherit;">
                 <p style>Webdevin'</p>
               </a>
               &nbsp;
-              <a href="https://maddycha.com/" style="display: block; 
+              <a href="https://maddycha.com/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>maddycha</p>
               </a>
               &nbsp;
-              <a href="https://www.w3schools.com/howto/default.asp" style="display: block; 
+              <a href="https://www.w3schools.com/howto/default.asp" target="_blank" style="display: block; 
   color: inherit;">
                 <p>W3Schools</p>
               </a>
               &nbsp;
-              <a href="https://codeshack.io/css-flexbox-generator/" style="display: block; 
+              <a href="https://codeshack.io/css-flexbox-generator/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>CSS-Flexbox Generator</p>
               </a>
               &nbsp;
-              <a href="https://stackoverflow.com/questions" style="display: block; 
+              <a href="https://stackoverflow.com/questions" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Stack Overflow</p>
               </a>
               &nbsp;
-              <a href="https://www.rw-designer.com/cursor-set/aero-tailles-shadow-big-sized" style="display: block; 
+              <a href="https://www.rw-designer.com/cursor-set/aero-tailles-shadow-big-sized" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Aero Tailles</p>
               </a>
               &nbsp;
-              <a href="https://fonts.google.com/selection/embed" style="display: block; 
+              <a href="https://fonts.google.com/selection/embed" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Google Fonts</p>
               </a>
               &nbsp;
-              <a href="https://petracoding.github.io/pinterest/" style="display: block; 
+              <a href="https://petracoding.github.io/pinterest/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>petracoding|pinterest</p>
               </a>
               &nbsp;
-              <a href="https://ianlunn.github.io/Hover/" style="display: block; 
+              <a href="https://ianlunn.github.io/Hover/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Hover CSS</p>
               </a>
               &nbsp;
-              <a href="https://chatango.com/" style="display: block; 
+              <a href="https://chatango.com/" target="_blank" style="display: block; 
   color: inherit;">
                 <p>Chatango</p>
               </a>
               &nbsp;
-              <a href="https://janhendrikewers.uk/bookshelf_for_personal_website" style="display: block;
+              <a href="https://janhendrikewers.uk/bookshelf_for_personal_website" target="_blank" style="display: block;
   color: inherit;">
                 <p>Bookshelf CSS</p>
               </a>
               &nbsp;
-              <a href="https://aleclownes.com/2017/02/01/crt-display.html" style="display: block; 
+              <a href="https://aleclownes.com/2017/02/01/crt-display.html" target="_blank" style="display: block; 
   color: inherit;">
                 <p>CRT effect</p>
               </a>
@@ -298,7 +335,6 @@
 
     <div class="flex-item-3" style="  width: 459px;
 ">
-      <!-- Added a class for styling -->
       <div class="image-text-container">
 
         <div href="#" class="hvr-bob" style="margin-top: 4px;">
@@ -326,141 +362,134 @@
 
     <div class="flex-item-4" style="  width: 151px;
 ">
-      <div id="lol"><img class="img2" data-target="img1"
+      <div id="lol" class="tooltip"><span class="tooltiptext">click to play, scroll for volume</span>
+        <img class="img2" data-target="img1"
           src="https://vgmsite.com/soundtracks/animal-crossing-new-horizons-2020-switch-gamerip/Cover_Alt.jpg"
-          style="height: 100px;width: 100px;"><img id="myImage" class="img1"
+          style="height: 100px;width: 100px; border-right: 1px solid #000000;"><img id="myImage" class="img1"
           src="https://web.archive.org/web/20220514070535im_/https://cdn.discordapp.com/attachments/822589056256311328/890714753780031488/image0.png"
-          style="margin-left: -50px; position: static;width: 100px;height: 100px;">
+          style="margin-left: -69px; position: absolute;height: 98px; border-radius: 100px; border: 1px solid #000000;border-left-width: 1px;border-bottom-width: 1px;border-top-width: 1px;border-right-width: 1px;width: 98px;">
       </div>
       <audio id="audio" src="https://files.catbox.moe/nwewpp.mp3"></audio>
       <script>
- // Get a reference to the image elements and the audio element
-  const img2 = document.querySelector('.img2');
-  const img1 = document.getElementById('myImage');
-  const audio = document.getElementById('audio');
+        const img2 = document.querySelector('.img2');
+        const img1 = document.getElementById('myImage');
+        const audio = document.getElementById('audio');
 
-  // --- Functions to save and load state using localStorage ---
+        function savePlaybackState() {
+          localStorage.setItem('audio_playback_time', audio.currentTime);
+          localStorage.setItem('audio_is_playing', !audio.paused);
+          localStorage.setItem('audio_volume', audio.volume);
+        }
 
-  function savePlaybackState() {
-    localStorage.setItem('audio_playback_time', audio.currentTime);
-    localStorage.setItem('audio_is_playing', !audio.paused);
-    localStorage.setItem('audio_volume', audio.volume);
-  }
+        function loadPlaybackState() {
+          const savedTime = localStorage.getItem('audio_playback_time');
+          const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
+          const savedVolume = localStorage.getItem('audio_volume');
 
-  function loadPlaybackState() {
-    const savedTime = localStorage.getItem('audio_playback_time');
-    const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
-    const savedVolume = localStorage.getItem('audio_volume');
-
-    if (savedTime) {
-      audio.currentTime = parseFloat(savedTime);
-    }
-
-    if (savedVolume) {
-      audio.volume = parseFloat(savedVolume);
-    }
-
-    // If music was playing before reload, try to resume it.
-    if (wasPlaying) {
-      const tryToPlay = () => {
-        audio.play().catch(e => {
-          console.log("Autoplay was prevented. User must click to resume playback.");
-          img1.classList.add('active');
-        });
-      };
-
-      if (document.visibilityState === 'visible') {
-        tryToPlay();
-      } else {
-        document.addEventListener('visibilitychange', () => {
-          if (document.visibilityState === 'visible') {
-            tryToPlay();
+          if (savedTime) {
+            audio.currentTime = parseFloat(savedTime);
           }
-        }, { once: true });
-      }
-    }
-  }
 
-  // --- Event Listeners ---
+          if (savedVolume) {
+            audio.volume = parseFloat(savedVolume);
+          }
 
-  // Listen for clicks on img2 to toggle audio and animation
-  img2.addEventListener('click', function () {
-    img1.classList.toggle('active');
+          if (wasPlaying) {
+            const tryToPlay = () => {
+              audio.play().catch(e => {
+                console.log("Autoplay was prevented. User must click to resume playback.");
+                img1.classList.add('active');
+              });
+            };
 
-    if (img1.classList.contains('active')) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  });
-
-  // Update the saved playback state regularly while the audio is playing
-  audio.addEventListener('timeupdate', savePlaybackState);
-
-  // Clear storage when the track ends
-  audio.addEventListener('ended', () => {
-    localStorage.removeItem('audio_playback_time');
-    localStorage.removeItem('audio_is_playing');
-    img1.classList.remove('active');
-  });
-
-  // Listen for the 'wheel' event on the entire window
-  window.addEventListener('wheel', function (event) {
-    if (img2.contains(event.target)) {
-      event.preventDefault();
-
-      if (event.deltaY < 0) {
-        if (audio.volume < 1.0) audio.volume += 0.1;
-      } else if (event.deltaY > 0) {
-        if (audio.volume > 0.0) audio.volume -= 0.1;
-      }
-      localStorage.setItem('audio_volume', audio.volume);
-      console.log("New volume: ", audio.volume);
-    }
-  });
-
-  // --- Page Navigation and Visibility ---
-
-  window.addEventListener('beforeunload', () => {
-    if (!audio.paused) {
-      savePlaybackState();
-    } else {
-      localStorage.removeItem('audio_playback_time');
-      localStorage.removeItem('audio_is_playing');
-    }
-  });
-
-  // **Updated:** Listen for visibility changes on the document
-  document.addEventListener('visibilitychange', function () {
-    // Check if the music was playing *before* the tab became hidden
-    const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
-
-    if (document.visibilityState === 'hidden') {
-      // We only pause if the user is explicitly controlling it,
-      // otherwise we assume they want background audio.
-      // However, we must pause the animation to save resources.
-      img1.classList.remove('active');
-    } else {
-      // If the music was playing and we return, reactivate the animation.
-      if (wasPlaying) {
-        img1.classList.add('active');
-        // The audio playback will automatically continue in the background
-        // without needing to be toggled again here.
-      }
-    }
-  });
+            if (document.visibilityState === 'visible') {
+              tryToPlay();
+            } else {
+              document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                  tryToPlay();
+                }
+              }, { once: true });
+            }
+          }
+        }
 
 
-  // Initial page load logic
-  document.addEventListener('DOMContentLoaded', () => {
-    loadPlaybackState();
-  });
+        img2.addEventListener('click', function () {
+          img1.classList.toggle('active');
+
+          if (img1.classList.contains('active')) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+        });
+
+
+        audio.addEventListener('timeupdate', savePlaybackState);
+
+        audio.addEventListener('ended', () => {
+          localStorage.removeItem('audio_playback_time');
+          localStorage.removeItem('audio_is_playing');
+          img1.classList.remove('active');
+        });
+
+        window.addEventListener('wheel', function (event) {
+          if (img2.contains(event.target)) {
+            event.preventDefault();
+
+            if (event.deltaY < 0) {
+              if (audio.volume < 1.0) audio.volume += 0.1;
+            } else if (event.deltaY > 0) {
+              if (audio.volume > 0.0) audio.volume -= 0.1;
+            }
+            localStorage.setItem('audio_volume', audio.volume);
+            console.log("New volume: ", audio.volume);
+          }
+        });
+
+
+        window.addEventListener('beforeunload', () => {
+          if (!audio.paused) {
+            savePlaybackState();
+          } else {
+            localStorage.removeItem('audio_playback_time');
+            localStorage.removeItem('audio_is_playing');
+          }
+        });
+
+
+        document.addEventListener('visibilitychange', function () {
+
+          const wasPlaying = localStorage.getItem('audio_is_playing') === 'true';
+
+          if (document.visibilityState === 'hidden') {
+
+            img1.classList.remove('active');
+          } else {
+
+            if (wasPlaying) {
+              img1.classList.add('active');
+
+            }
+          }
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+          loadPlaybackState();
+        });
 
       </script>
     </div>
 
-    <div class="flex-item-5" style="  width: 260px;
-">Flex Item 5</div>
+    <div class="flex-item-5" style="  width: 260px;">
+  
+      <img  src="/Books/73zf6kwsfb5f1.gif">
+      <img src="/Books/stad2shinysuicune.gif" style="margin-left: -10px;margin-right: 10px;margin-bottom: 10px;">
+      <img src="/Books/deltarune-undertale.gif">
+    </div>
   </div>
   <div class="container3">
     <div class="flex-item-6">
@@ -500,7 +529,6 @@
                       background-image: var(--pyramid);
                       background-color: maroon;
                     ">
-            <!-- removed spine-title and spine-author -->
             <img src="/Books/WORSPINE.jpg" height="100%" width="100%" />
           </div>
           <div class="side top" style="top: 42px"></div>
@@ -521,7 +549,6 @@
                       background-color: saddlebrown;
                     ">
             <img src="/Books/OBSPINE.jpeg" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 30px"></div>
           <div class="side cover" style="
@@ -540,7 +567,6 @@
                       background-color: darkgreen;
                     ">
             <img src="/Books/ROWSPINE.jpg" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 56px"></div>
           <div class="side cover" style="
@@ -559,7 +585,6 @@
                       background-color: midnightblue;
                     ">
             <img src="/Books/WATSPINE.jpeg" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: -7px"></div>
           <div class="side cover" style="
@@ -596,7 +621,6 @@
                       background-color: saddlebrown;
                     ">
             <img src="/Books/RRSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 44px"></div>
           <div class="side cover" style="
@@ -615,7 +639,6 @@
                       background-color: midnightblue;
                     ">
             <img src="/Books/GSSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 49px"></div>
           <div class="side cover" style="
@@ -634,7 +657,6 @@
                       background-color: saddlebrown;
                     ">
             <img src="/Books/MSSSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 5px"></div>
           <div class="side cover" style="
@@ -653,7 +675,6 @@
                       background-color: darkgreen;
                     ">
             <img src="/Books/IGSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 28px"></div>
           <div class="side cover" style="
@@ -672,7 +693,6 @@
                       background-color: midnightblue;
                     ">
             <img src="/Books/DASPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 46px"></div>
           <div class="side cover" style="
@@ -691,7 +711,6 @@
                       background-color: midnightblue;
                     ">
             <img src="/Books/LBSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 41px"></div>
           <div class="side cover" style="
@@ -710,7 +729,6 @@
                       background-color: darkgreen;
                     ">
             <img src="/Books/TWOTMSPINE.JPEG" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: 57px"></div>
           <div class="side cover" style="
@@ -729,7 +747,6 @@
                       background-color: saddlebrown;
                     ">
             <img src="/Books/EOSSPINE.png" height="100%" width="100%" />
-            <!-- removed spine-title and spine-author -->
           </div>
           <div class="side top" style="top: -4px"></div>
           <div class="side cover" style="
@@ -759,7 +776,6 @@
       evt.currentTarget.className += " active";
     }
 
-    // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
   </script>
 </body>
