@@ -82,12 +82,12 @@
             border-right-width: 1px;
             border-top-width: 0px;
           ">
-            <a href="index.html" style="color: #000000; text-decoration: none;">
-                <button
-                    style="font-size: 17px; font-weight: bolder; border:1px black;border-right-width: 1px;border-right-style: solid;">
-                    &lt;- Back
+    
+                <button 
+                    style="font-size: 17px; font-weight: bolder;">
+                    <a href="index.html">&lt;- Back</a>
                 </button>
-            </a>
+
             <button class="tablinks" onclick="openTab(event, 'myStuff')" id="defaultOpen" style="font-size: 17px;">
                 <strong>myStuff</strong>
             </button>
@@ -101,20 +101,27 @@
                 style="font-size: 17px; border-right-width: 1px;border-right-style: solid;">
                 <strong>stickers</strong>
             </button>
+<div class="tablinks" onclick="openTab(event, 'stickers')"
+    style="font-size: 13px; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <p style="font-weight: bold; margin-left: 20px;">a collection of all my stuff, like collectibles, music
+        i listen to, and my art</p>
+</div>
+
+
         </div>
 
 
         <!-- Tab content -->
 
         <div id="myStuff" class="tabcontent"
-            style="width: 100%; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px; padding-top: 100px;">
+            style="width: 100%; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px; padding-top: 10%;">
         
-            <!-- This is the container that needs the CSS Grid properties -->
             <div style="
                 display: grid; 
-                grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
-                place-items: center; /* Centers items horizontally and vertically within each grid cell */
-                gap: 20px; /* Adds space between the images */
+                grid-template-columns: repeat(3, 1fr);
+                place-items: center; 
+                gap: 20px; 
+                padding-bottom: 19px;
             ">
                 <img class="hvr-grow-rotate" src="/smiski/studysmiski.png">
                 <img class="hvr-grow-rotate" src="/smiski/guitarsmiski.png" style="width: 100px;">
@@ -126,11 +133,15 @@
                     style="width: 100px; --drop-shadow-color: #8ac3ff;">
                 <img class="hvr-grow-rotate" src="/smiski/pochitasitting.png"
                     style="width: 100px; --drop-shadow-color: #ff641c;">
-                <img class="hvr-grow-rotate" src="/smiski/suneoviolin.png" style="width: 100px; --drop-shadow-color: #ff6060;">
+                <img class="hvr-grow-rotate" src="/smiski/suneoviolin.png" style="width: 115px; --drop-shadow-color: #ff6060;">
                 <img class="hvr-grow-rotate" src="/smiski/samuraichoppa.png"
                     style="width: 120px; --drop-shadow-color: #fffc44;">
-                <img class="hvr-grow-rotate" src="/smiski/telecaster.png" style="width: 180px; --drop-shadow-color: #800000;">
+                <img class="hvr-grow-rotate" src="/smiski/Squier-Debut-Telecaster.png" style="width: 300px; --drop-shadow-color: #800000;">
                 <img class="hvr-grow-rotate" src="/smiski/legomantis.png" style="width: 120px; --drop-shadow-color: #037e2c;">
+                <img class="hvr-grow-rotate" src="/smiski/redbakugan.png" style="width: 120px; --drop-shadow-color: #db103c;">
+                <img class="hvr-grow-rotate" src="/smiski/Pegatrix.png" style="width: 140px; --drop-shadow-color: #4affff;">
+                <img class="hvr-grow-rotate" src="/smiski/Hydorous.png" style="width: 140px; --drop-shadow-color: #411da3;">
+                                <img class="hvr-grow-rotate" src="/smiski/twistedtemp.png" style="width: 140px; --drop-shadow-color: #1c5372;">
                 <style>
                     .hvr-grow-rotate:hover {
                         filter: drop-shadow(5px 5px 10px var(--drop-shadow-color, rgb(117, 141, 30)));
@@ -143,19 +154,16 @@
         <div id="music" class="tabcontent"
             style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px;padding-top: 70px;">
             <p>Here is some of the music that I like</p>
+<iframe src="/webdeck-player/index.html" height="250" width="600"></iframe>
         </div>
 
         <div id="art" class="tabcontent"
             style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px;">
-            <iframe
-                src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/people/&hideHeader=1&hideFooter=1&transparent=1"
-                style="width:100%; height: 100%;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+  
         </div>
         <div id="stickers" class="tabcontent"
             style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px;">
-            <iframe
-                src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/raining-cats-and-dogs&hideHeader=1&hideFooter=1&transparent=1"
-                style="width:100%; height: 100%;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+
         </div>
     </div>
     </div>
