@@ -50,7 +50,7 @@
 
     img {
         width: 100px;
-        
+
     }
 
 
@@ -79,7 +79,7 @@
         <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
-            border-right-width: 0px;
+            border-right-width: 1px;
             border-top-width: 0px;
           ">
             <a href="index.html" style="color: #000000; text-decoration: none;">
@@ -107,16 +107,41 @@
         <!-- Tab content -->
 
         <div id="myStuff" class="tabcontent"
-            style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px;"><div>
-            <img class="hvr-grow-rotate" src="/smiski/studysmiski.png" >
-            <style> .hvr-grow-rotate:hover {
-                    filter: drop-shadow(5px 5px 10px rgb(117, 141, 30));
-            }</style>
+            style="width: 100%; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px; padding-top: 100px;">
+        
+            <!-- This is the container that needs the CSS Grid properties -->
+            <div style="
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+                place-items: center; /* Centers items horizontally and vertically within each grid cell */
+                gap: 20px; /* Adds space between the images */
+            ">
+                <img class="hvr-grow-rotate" src="/smiski/studysmiski.png">
+                <img class="hvr-grow-rotate" src="/smiski/guitarsmiski.png" style="width: 100px;">
+                <img class="hvr-grow-rotate" src="/smiski/smiskimovinglamp.png" style="width: 100px;">
+                <img class="hvr-grow-rotate" src="/smiski/leadersmiski.png" style="width: 115px;">
+                <img class="hvr-grow-rotate" src="/smiski/dogsmiski.png" style="width: 150px;">
+                <img class="hvr-grow-rotate" src="/smiski/fuzinRaijinsmiski.png" style="width:220px;">
+                <img class="hvr-grow-rotate" src="/smiski/lookingsmiski.png"
+                    style="width: 100px; --drop-shadow-color: #8ac3ff;">
+                <img class="hvr-grow-rotate" src="/smiski/pochitasitting.png"
+                    style="width: 100px; --drop-shadow-color: #ff641c;">
+                <img class="hvr-grow-rotate" src="/smiski/suneoviolin.png" style="width: 100px; --drop-shadow-color: #ff6060;">
+                <img class="hvr-grow-rotate" src="/smiski/samuraichoppa.png"
+                    style="width: 120px; --drop-shadow-color: #fffc44;">
+                <img class="hvr-grow-rotate" src="/smiski/telecaster.png" style="width: 180px; --drop-shadow-color: #800000;">
+                <img class="hvr-grow-rotate" src="/smiski/legomantis.png" style="width: 120px; --drop-shadow-color: #037e2c;">
+                <style>
+                    .hvr-grow-rotate:hover {
+                        filter: drop-shadow(5px 5px 10px var(--drop-shadow-color, rgb(117, 141, 30)));
+                    }
+                </style>
             </div>
         </div>
 
+
         <div id="music" class="tabcontent"
-            style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px;">
+            style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px;padding-top: 70px;">
             <p>Here is some of the music that I like</p>
         </div>
 
