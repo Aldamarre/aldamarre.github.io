@@ -12,6 +12,8 @@
     margin: 0;
     padding: 0;
     scrollbar-width: none;
+    scroll-behavior: none;
+    overflow: hidden;
 }
 
 body{
