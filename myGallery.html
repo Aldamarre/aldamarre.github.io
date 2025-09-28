@@ -12,6 +12,11 @@
   <link rel="" stylesheeth" href="chat.css" />
   <link rel="stylesheet" href=hover.css>
   <div class="crt"></div>
+  <link rel="preload" as="image" href="/myGallery/image.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/myGallery/IMG_0048.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/myGallery/IMG_1704.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/myGallery/IMG_1711.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/myGallery/IMG_1705.webp" fetchpriority="high">
 </head>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
@@ -148,39 +153,34 @@ button{
 
 
   <div class="column">
-  <img src="/myGallery/image.webp" loading="lazy" alt="Description of image 1">
-  <img src="/myGallery/IMG_0048.webp" loading="lazy" alt="Description of image 2">
-  <img src="/myGallery/IMG_1704.webp" loading="lazy" alt="Description of image 3">
-  <img src="/myGallery/IMG_1711.webp" loading="lazy" alt="Description of image 4">
-  <img src="/myGallery/IMG_1705.webp" loading="lazy" alt="Description of image 5">
-  <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6">
+    <!-- These images are eagerly loaded and preloaded for fast display -->
+    <img src="/myGallery/image.webp" alt="Description of image 1">
+    <img src="/myGallery/IMG_0048.webp" alt="Description of image 2">
+    <img src="/myGallery/IMG_1704.webp" alt="Description of image 3">
+    <img src="/myGallery/IMG_1711.webp" alt="Description of image 4">
+    <img src="/myGallery/IMG_1705.webp" alt="Description of image 5">
+  
+    <!-- All remaining images are lazy-loaded -->
+    <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6">
   </div>
   <div class="column">
-    <img src="/myGallery/IMG_0790.webp"  loading="lazy" alt="Description of image 7">
-    <img src="/myGallery/IMG_1802.webp"  loading="lazy" alt="Description of image 8">
-    <img src="/myGallery/IMG_5608.webp"  loading="lazy" alt="Description of image 9">
-    <img src="/myGallery/IMG_0386.webp"  loading="lazy" alt="Description of image 10">
-    <img src="/myGallery/IMG_0571.webp"  loading="lazy" alt="Description of image 11">
-    <img src="/myGallery/IMG_3382.webp"  loading="lazy" alt="Description of image 12">
-    <img src="/myGallery/IMG_1384.webp"  loading="lazy" alt="Description of image 13">
+    <img src="/myGallery/IMG_0790.webp" loading="lazy" alt="Description of image 7">
+    <img src="/myGallery/IMG_1802.webp" loading="lazy" alt="Description of image 8">
+    <img src="/myGallery/IMG_5608.webp" loading="lazy" alt="Description of image 9">
+    <img src="/myGallery/IMG_0386.webp" loading="lazy" alt="Description of image 10">
+    <img src="/myGallery/IMG_0571.webp" loading="lazy" alt="Description of image 11">
+    <img src="/myGallery/IMG_3382.webp" loading="lazy" alt="Description of image 12">
+    <img src="/myGallery/IMG_1384.webp" loading="lazy" alt="Description of image 13">
   </div>
   <div class="column">
-    <img src="/myGallery/20241025_132404.webp"  loading="lazy" alt="Description of image 14">
-    <img src="/myGallery/IMG_2050.webp"  loading="lazy" alt="Description of image 15">
-    <img src="/myGallery/IMG_0152.webp"  loading="lazy" alt="Description of image 16">
-    <img src="/myGallery/IMG_0559.webp"  loading="lazy" alt="Description of image 17">
-    <img src="/myGallery/IMG_5623.webp"  loading="lazy" alt="Description of image 18">
-    <img src="/myGallery/IMG_9422.webp"  loading="lazy" alt="Description of image 19">
-    <img src="/myGallery/IMG_1386.webp"  loading="lazy" alt="Description of image 20">
+    <img src="/myGallery/20241025_132404.webp" loading="lazy" alt="Description of image 14">
+    <img src="/myGallery/IMG_2050.webp" loading="lazy" alt="Description of image 15">
+    <img src="/myGallery/IMG_0152.webp" loading="lazy" alt="Description of image 16">
+    <img src="/myGallery/IMG_0559.webp" loading="lazy" alt="Description of image 17">
+    <img src="/myGallery/IMG_5623.webp" loading="lazy" alt="Description of image 18">
+    <img src="/myGallery/IMG_9422.webp" loading="lazy" alt="Description of image 19">
+    <img src="/myGallery/IMG_1386.webp" loading="lazy" alt="Description of image 20">
   </div>
-  <div class="column">
-    <img src="/myGallery/cachedImage.webp"  loading="lazy" alt="Description of image 21">
-    <img src="/myGallery/IMG_1212.webp"  loading="lazy" alt="Description of image 22">
-    <img src="/myGallery/IMG_2832.webp"  loading="lazy" alt="Description of image 23">
-    <img src="/myGallery/IMG_9100.webp"  loading="lazy" alt="Description of image 24">
-    <img src="/myGallery/IMG_8131.webp"  loading="lazy" alt="Description of image 25">
-    <img src="/myGallery/IMG_1011.webp"  loading="lazy" alt="Description of image 26">
-</div>
   <div class="column">
     <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21">
     <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22">
@@ -189,7 +189,6 @@ button{
     <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25">
     <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26">
   </div>
-</div>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
 
