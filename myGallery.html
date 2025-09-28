@@ -22,9 +22,9 @@
   @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 
 
-html{
-     font-family: kode-mono;
-}
+  html {
+    font-family: kode-mono;
+  }
 
 
   * {
@@ -32,26 +32,26 @@ html{
 
   }
 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
   .header {
     text-align: left;
     padding: 0px;
     border: 1px solid black;
-   font-family: kode-mono;
+    font-family: kode-mono;
   }
 
 
 
-button{
-     font-family: kode-mono;
-}
+  button {
+    font-family: kode-mono;
+  }
 
 
   .row {
@@ -61,20 +61,21 @@ button{
     flex-wrap: wrap;
     background-color: #f1f1f1;
   }
-.preview {
-      height: 400px;
-      width: 50%;
-      background-color: #cacaca;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    .preview #preview-img {
-      max-width: 100%;
-      max-height: 100%; 
-      object-fit: contain;
-    }
+  .preview {
+    height: 400px;
+    width: 50%;
+    background-color: #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preview #preview-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 
   .column {
     -ms-flex: 25%;
@@ -87,17 +88,17 @@ button{
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-  
+
   }
 
-.column img:hover {
-      border-style:dotted;
-      border-color: rgb(0, 132, 255);
-    }
+  .column img:hover {
+    border-style: dotted;
+    border-color: rgb(0, 132, 255);
+  }
 
 
-  img{
-    
+  img {
+
     border: 1px solid #000000;
   }
 
@@ -123,92 +124,113 @@ button{
 <body>
 
   <!-- Header -->
-   <div class="flex-item-1" style="width: 60%; height: fit-content;margin-left: 100px;margin-right: 100px;">
-      <div class="tab" style="
+  <div class="flex-item-1" style="width: 60%; height: fit-content;margin-left: 100px;margin-right: 100px;">
+    <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-top-width: 0px;
           ">
-          <a href="index.html" style="color: #000000; text-decoration: none;">
-          <button style="font-size: 17px; font-weight: bolder;">
-            &lt;- Back
+      <a href="index.html" style="color: #000000; text-decoration: none;">
+        <button style="font-size: 17px; font-weight: bolder;">
+          &lt;- Back
         </button>
-          </a>
-        <button class="tablinks" style="font-size: 17px; ">
-          <strong>myGallery</strong>
-        </button>
+      </a>
+      <button class="tablinks" style="font-size: 17px; ">
+        <strong>myGallery</strong>
+      </button>
 
+    </div>
+
+    <!--PREVIEW PANEL-->
+    <div style="padding: 10px; display: right;">
+
+      <!-- Photo Grid -->
+      <div class="row">
+
+        <div class="preview" style="height: auto; width: 50%; background-color: #f1f1f1;">
+          <img id="preview-img" style="width: 100%; border: 2px solid;"></img>
+        </div>
+
+
+        <div class="column">
+          <!-- These images are eagerly loaded and preloaded for fast display -->
+          <img src="/myGallery/image.webp" alt="Description of image 1" style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_0048.webp" alt="Description of image 2" style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1704.webp" alt="Description of image 3" style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1711.webp" alt="Description of image 4" style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1705.webp" alt="Description of image 5" style="image-rendering:pixelated;">
+
+          <!-- All remaining images are lazy-loaded -->
+          <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6"
+            style="image-rendering:pixelated;">
+        </div>
+        <div class="column">
+          <img src="/myGallery/IMG_0790.webp" loading="lazy" alt="Description of image 7"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1802.webp" loading="lazy" alt="Description of image 8"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_5608.webp" loading="lazy" alt="Description of image 9"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_0386.webp" loading="lazy" alt="Description of image 10"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_0571.webp" loading="lazy" alt="Description of image 11"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_3382.webp" loading="lazy" alt="Description of image 12"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1384.webp" loading="lazy" alt="Description of image 13"
+            style="image-rendering:pixelated;">
+        </div>
+        <div class="column">
+          <img src="/myGallery/20241025_132404.webp" loading="lazy" alt="Description of image 14"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_2050.webp" loading="lazy" alt="Description of image 15"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_0152.webp" loading="lazy" alt="Description of image 16"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_0559.webp" loading="lazy" alt="Description of image 17"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_5623.webp" loading="lazy" alt="Description of image 18"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_9422.webp" loading="lazy" alt="Description of image 19"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1386.webp" loading="lazy" alt="Description of image 20"
+            style="image-rendering:pixelated;">
+        </div>
+        <div class="column">
+          <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_2832.webp" loading="lazy" alt="Description of image 23"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_9100.webp" loading="lazy" alt="Description of image 24"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25"
+            style="image-rendering:pixelated;">
+          <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26"
+            style="image-rendering:pixelated;">
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+
+            const thumbnails = document.querySelectorAll('.column img');
+
+            const previewImg = document.getElementById('preview-img');
+
+            if (thumbnails.length > 0) {
+              previewImg.src = thumbnails[0].src;
+            }
+
+            thumbnails.forEach(thumbnail => {
+              thumbnail.addEventListener('click', (event) => {
+                const clickedImageSrc = event.target.src;
+                previewImg.src = clickedImageSrc;
+              });
+            });
+          });
+        </script>
       </div>
-      
-<!--PREVIEW PANEL-->
-<div style="padding: 10px; display: right;" >
-
-<!-- Photo Grid -->
-<div class="row">
-
-  <div class="preview" style="height: auto; width: 50%; background-color: #f1f1f1;">
-<img id="preview-img" style="width: 100%; border: 2px solid;"></img>
-</div>
-
-
-  <div class="column">
-    <!-- These images are eagerly loaded and preloaded for fast display -->
-    <img src="/myGallery/image.webp" alt="Description of image 1">
-    <img src="/myGallery/IMG_0048.webp" alt="Description of image 2">
-    <img src="/myGallery/IMG_1704.webp" alt="Description of image 3">
-    <img src="/myGallery/IMG_1711.webp" alt="Description of image 4">
-    <img src="/myGallery/IMG_1705.webp" alt="Description of image 5">
-  
-    <!-- All remaining images are lazy-loaded -->
-    <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6">
-  </div>
-  <div class="column">
-    <img src="/myGallery/IMG_0790.webp" loading="lazy" alt="Description of image 7">
-    <img src="/myGallery/IMG_1802.webp" loading="lazy" alt="Description of image 8">
-    <img src="/myGallery/IMG_5608.webp" loading="lazy" alt="Description of image 9">
-    <img src="/myGallery/IMG_0386.webp" loading="lazy" alt="Description of image 10">
-    <img src="/myGallery/IMG_0571.webp" loading="lazy" alt="Description of image 11">
-    <img src="/myGallery/IMG_3382.webp" loading="lazy" alt="Description of image 12">
-    <img src="/myGallery/IMG_1384.webp" loading="lazy" alt="Description of image 13">
-  </div>
-  <div class="column">
-    <img src="/myGallery/20241025_132404.webp" loading="lazy" alt="Description of image 14">
-    <img src="/myGallery/IMG_2050.webp" loading="lazy" alt="Description of image 15">
-    <img src="/myGallery/IMG_0152.webp" loading="lazy" alt="Description of image 16">
-    <img src="/myGallery/IMG_0559.webp" loading="lazy" alt="Description of image 17">
-    <img src="/myGallery/IMG_5623.webp" loading="lazy" alt="Description of image 18">
-    <img src="/myGallery/IMG_9422.webp" loading="lazy" alt="Description of image 19">
-    <img src="/myGallery/IMG_1386.webp" loading="lazy" alt="Description of image 20">
-  </div>
-  <div class="column">
-    <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21">
-    <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22">
-    <img src="/myGallery/IMG_2832.webp" loading="lazy" alt="Description of image 23">
-    <img src="/myGallery/IMG_9100.webp" loading="lazy" alt="Description of image 24">
-    <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25">
-    <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26">
-  </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-
-    const thumbnails = document.querySelectorAll('.column img');
-
-    const previewImg = document.getElementById('preview-img');
-
-    if (thumbnails.length > 0) {
-      previewImg.src = thumbnails[0].src;
-    }
-
-    thumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener('click', (event) => {
-        const clickedImageSrc = event.target.src;
-        previewImg.src = clickedImageSrc;
-      });
-    });
-  });
-</script>
-</div>
 </body>
 
 </html>
