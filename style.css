@@ -2,20 +2,6 @@
   scrollbar-width: none;
 }
 
-.two-column-flex {
-  display: flex; /* 1. Turn the container into a flexbox */
-  flex-wrap: wrap; /* 2. Allow items to wrap to a new line */
-  max-height: 300px; /* 3. Set a maximum height to enable scrolling */
-  overflow-y: auto; /* 4. Add a vertical scrollbar when needed */
-  gap: 10px; /* 5. Add a gap between the flex items */
-}
-
-.two-column-flex > div {
-  flex-basis: 48%; /* 6. Use a percentage for flexible column widths */
-  flex-grow: 1; /* 7. Allow items to grow to fill available space */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
 
 
 
