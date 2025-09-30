@@ -75,35 +75,28 @@
     object-fit: contain;
   }
 
- /* Styles for the overall gallery container */
 .gallery-container {
-    /* Use a flexible layout for the main container */
     display: flex;
-    flex-wrap: wrap; /* Allow columns to wrap to the next line if needed */
-    padding: 0 4px; /* Optional: Add some padding for the whole gallery */
-    width: 500px; /* Restrict the overall gallery width to 500px */
+    flex-wrap: wrap; 
+    padding: 0 4px; 
+    width: 500px;
+    height: 600px; 
+    overflow-y: auto;
 }
 
-/* Styles for the individual columns */
+.gallery-container .column {
+    display: flex;
+    flex-direction: column;
+  }
 .column {
-    /* The Flexbox layout ensures columns are arranged as one list, not separated */
-    flex: 25%; /* Each column takes up 25% of the total container width */
-    max-width: 25%; /* Prevents columns from getting wider than 25% */
-    padding: 0 4px; /* Optional: Add some padding for spacing between columns */
-    /*
-     * Forcing the images to form a single continuous list can be
-     * achieved by using flex-direction: column inside the `.column`
-     * and a set height. However, the most natural flow for images
-     * that seem to "merge" is to not split them into columns in the
-     * first place, or to use the CSS `columns` property instead.
-     */
+    flex: 25%; 
+    max-width: 25%;
+    padding: 0 4px; 
+
 }
 
-/* Styles for all images within the gallery */
 .column img {
-    /* Images will fill the width of their parent column div */
     width: 100%;
-    /* Add a small top margin for spacing between images in the same column */
     margin-top: 8px;
     vertical-align: middle;
 }
@@ -172,52 +165,41 @@
         <div class="gallery-container" style="width: 50%;">
           <div class="column">
             <!-- These images are eagerly loaded and preloaded for fast display -->
-            <img src="/myGallery/image.webp" alt="Description of image 1" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_0048.webp" alt="Description of image 2" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1704.webp" alt="Description of image 3" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1711.webp" alt="Description of image 4" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1705.webp" alt="Description of image 5" style="image-rendering:pixelated;">
-            <!-- All remaining images are lazy-loaded -->
-            <img src="/myGallery/IMG_8461.webp" loading="lazy" alt="Description of image 6" style="image-rendering:pixelated;">
+            <img src="/myGallery/image.webp">
+            <img src="/myGallery/IMG_0048.webp">
+            <img src="/myGallery/IMG_1704.webp">
+            <img src="/myGallery/IMG_1711.webp">
+            <img src="/myGallery/IMG_1705.webp">
+            <img src="/myGallery/IMG_8461.webp">
+            
           </div>
           <div class="column">
-            <img src="/myGallery/IMG_0790.webp" loading="lazy" alt="Description of image 7" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1802.webp" loading="lazy" alt="Description of image 8" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_5608.webp" loading="lazy" alt="Description of image 9" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_0386.webp" loading="lazy" alt="Description of image 10" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_0571.webp" loading="lazy" alt="Description of image 11" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_3382.webp" loading="lazy" alt="Description of image 12" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1384.webp" loading="lazy" alt="Description of image 13" style="image-rendering:pixelated;">
+            <img src="/myGallery/IMG_0790.webp" loading="lazy" alt="Description of image 7" >
+            <img src="/myGallery/IMG_1802.webp" loading="lazy" alt="Description of image 8" >
+            <img src="/myGallery/IMG_5608.webp" loading="lazy" alt="Description of image 9" >
+            <img src="/myGallery/IMG_0386.webp" loading="lazy" alt="Description of image 10" >
+            <img src="/myGallery/IMG_0571.webp" loading="lazy" alt="Description of image 11" >
+            <img src="/myGallery/IMG_3382.webp" loading="lazy" alt="Description of image 12" >
+            <img src="/myGallery/IMG_1384.webp" loading="lazy" alt="Description of image 13" >
           </div>
           <div class="column">
-            <img src="/myGallery/20241025_132404.webp" loading="lazy" alt="Description of image 14"
-              style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_2050.webp" loading="lazy" alt="Description of image 15" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_0152.webp" loading="lazy" alt="Description of image 16" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_0559.webp" loading="lazy" alt="Description of image 17" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_5623.webp" loading="lazy" alt="Description of image 18" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_9422.webp" loading="lazy" alt="Description of image 19" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1386.webp" loading="lazy" alt="Description of image 20" style="image-rendering:pixelated;">
+            <img src="/myGallery/20241025_132404.webp" loading="lazy" 
+              >
+            <img src="/myGallery/IMG_2050.webp" loading="lazy"  >
+            <img src="/myGallery/IMG_0152.webp" loading="lazy" alt="Description of image 16" >
+            <img src="/myGallery/IMG_0559.webp" loading="lazy" alt="Description of image 17" >
+            <img src="/myGallery/IMG_5623.webp" loading="lazy" alt="Description of image 18" >
+            <img src="/myGallery/IMG_9422.webp" loading="lazy" alt="Description of image 19" >
+            <img src="/myGallery/IMG_1386.webp" loading="lazy" alt="Description of image 20" >
           </div>
           <div class="column">
-            <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21"
-              style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_2832.webp" loading="lazy" alt="Description of image 23" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_9100.webp" loading="lazy" alt="Description of image 24" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25" style="image-rendering:pixelated;">
-            <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26" style="image-rendering:pixelated;">
+            <img src="/myGallery/cachedImage.webp" loading="lazy">
+            <img src="/myGallery/IMG_1212.webp" loading="lazy" >
+            <img src="/myGallery/IMG_2832.webp"v>
+            <img src="/myGallery/IMG_9100.webp"  >
+            <img src="/myGallery/IMG_8131.webp" >
+            <img src="/myGallery/IMG_1011.webp" >
           </div>
-                    <div class="column">
-                      <img src="/myGallery/cachedImage.webp" loading="lazy" alt="Description of image 21"
-                        style="image-rendering:pixelated;">
-                      <img src="/myGallery/IMG_1212.webp" loading="lazy" alt="Description of image 22" style="image-rendering:pixelated;">
-                      <img src="/myGallery/IMG_2832.webp" loading="lazy" alt="Description of image 23" style="image-rendering:pixelated;">
-                      <img src="/myGallery/IMG_9100.webp" loading="lazy" alt="Description of image 24" style="image-rendering:pixelated;">
-                      <img src="/myGallery/IMG_8131.webp" loading="lazy" alt="Description of image 25" style="image-rendering:pixelated;">
-                      <img src="/myGallery/IMG_1011.webp" loading="lazy" alt="Description of image 26" style="image-rendering:pixelated;">
-                    </div>
-        </div>
         <script>
           document.addEventListener('DOMContentLoaded', () => {
 
