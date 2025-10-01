@@ -54,8 +54,15 @@ body {
 
   /* Animation properties */
   animation: diagonal-pan 10s linear infinite;
+  
 }
 
+    @font-face {
+        font-family: JD-WARNING;
+        src: url(/JD-WARNING-BASIC.otf);
+        font-weight: normal;
+        font-style: normal;
+    }
 
 /* Define the keyframe animation */
 @keyframes diagonal-pan {
@@ -71,7 +78,7 @@ body {
 
 
 .flex-item-1 {
-  height: 50%;
+  height: 40em;
   width: 580px;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);

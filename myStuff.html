@@ -9,10 +9,20 @@
     <meta name="viewport" content="width=980, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
     <link rel="stylesheet" href="myStuff.css" />
     <link rel="stylesheet" href=hover.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap" rel="stylesheet">
     <div class="crt"></div>
 </head>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+    @font-face {
+        font-family: JD-WARNING;
+        src: url(/JD-WARNING-BASIC.otf);
+        font-weight: normal;
+        font-style: normal;
+    }
 
 
     html {
@@ -75,7 +85,8 @@
 
     <!-- Header -->
     <div class="flex-item-1" style="width: 60%;margin-left: 100px;margin-right: 100px; scrollbar-width: none;">
-        <div class="tab" style="position: sticky; top: 0; border-bottom-width: 1px; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; background-color: white; z-index: 10;">
+        <div class="tab"
+            style="position: sticky; top: 0; border-bottom-width: 1px; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; background-color: white; z-index: 10;">
 
             <a href="index.html" style="color: #000000; text-decoration: none;">
                 <button style="font-size: 17px; font-weight: bolder;">
@@ -97,7 +108,8 @@
                 <strong>games</strong>
             </button>
 
-            <button class="tablinks desc" id="desc" style="font-size: 90%; font-style: oblique; letter-spacing: -0.01em; width: 100%;">
+            <button class="tablinks desc" id="desc"
+                style="font-size: 0.8rem; font-style: oblique; letter-spacing: -0.01em; width: 100%;">
                 a catalog of stuff i own, like, or make!
             </button>
         </div>
@@ -232,7 +244,7 @@
 
                         const step = 4 * 10;
                         const whiteThreshold = 240;
-                        const brightnessThreshold = 200; 
+                        const brightnessThreshold = 200;
                         const fallbackColor = 'rgb(100, 50, 150)';
 
                         for (let i = 0; i < pixelData.length; i += step) {
@@ -280,9 +292,27 @@
             </div>
         </div>
 
-        <div id="art" class="tabcontent"
-            style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px;">
-
+        <div id="art" class="tabcontent" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    height: 850px;
+    padding-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+">
+            <div class="warning" style="
+        position: absolute; 
+        top: 50%;       
+        left: 50%;         
+        transform: translate(-50%, -50%); 
+    ">
+                <p style="font-family: 'Coral Pixels' ; font-size:  3rEM;">UNDER CONSTRUCTION</p>
+            </div>
         </div>
         <div id="games" class="tabcontent"
             style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px;">
@@ -308,7 +338,7 @@
         document.getElementById("defaultOpen").click();
     </script>
     <script>
-]        const scrollContainer = document.querySelector(".tab");
+ const scrollCntainer = document.querySelector(".tab");
 
         scrollContainer.addEventListener("wheel", (event) => {
             event.preventDefault();
