@@ -1,0 +1,202 @@
+*{
+  scrollbar-width: none;
+  overscroll-behavior: none;
+  font-family: "kode Mono";
+
+}
+
+
+
+
+body {
+
+  /* Original background styles */
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 5px, transparent 5px),
+    linear-gradient(rgba(0, 0, 0, 0.05) 5px, transparent 5px),
+    linear-gradient(-90deg, rgba(0, 0, 0, 0.04) 2px, transparent 2px),
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(
+      transparent 4px,
+      #f2f2f2 4px,
+      #f2f2f2 78px,
+      transparent 78px
+    ),
+    linear-gradient(-90deg, #aaa 2px, transparent 2px),
+    linear-gradient(
+      -90deg,
+      transparent 4px,
+      #f2f2f2 4px,
+      #f2f2f2 78px,
+      transparent 78px
+    ),
+    linear-gradient(#aaa 2px, transparent 2px), #f2f2f2;
+  background-size: 4px 4px, 4px 4px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px;
+  
+  /* Required for the background to repeat and not be fixed */
+  background-repeat: repeat;
+
+  /* Other body styles */
+  font-family: "kode Mono", monospace !important;
+  font-optical-sizing: auto;
+  overflow: auto;
+
+  /* Animation properties */
+  animation: diagonal-pan 10s linear infinite;
+}
+
+
+/* Define the keyframe animation */
+@keyframes diagonal-pan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    /* Shifts the background 80px right and 80px down to create a diagonal motion */
+    background-position: 80px 80px;
+  }
+}
+
+
+
+
+.homeheader{
+  margin-top: 15px;
+}
+
+
+
+
+.flex-item-1 {
+  height: 800px;
+  width: 580px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  margin-right: 5px;
+  overflow-y: scroll;
+}
+
+
+body {
+  font-family: Arial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #000000;
+  background-color: #f1f1f1;
+}
+
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: "kode Mono", monospace !important;
+  border-right: 1px solid black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.ib-icon
+
+.HEAD  {
+  width: 0px -important;
+  height: 0px -important;
+}
+
+element {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  scrollbar-width: none;
+}
+
+/* Removed media query for fixed layout */
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(#12101000 50%, #0000001a 50%),
+    linear-gradient(90deg, #ff000008, #00ff0005, #0000ff08);
+  z-index: 400;
+  background-size: 100% 4px, 4px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+
+  5% {
+    opacity: 0.34769;
+  }
+
+  10% {
+    opacity: 0.23604;
+  }
+
+  15% {
+    opacity: 0.10626;
+  }
+
+  20% {
+    opacity: 0.18128;
+  }
+
+  25% {
+    opacity: 0.10626;
+  }
+
+  30% {
+    opacity: 0.18128;
+  }
+
+  35% {
+    opacity: 0.23604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #12101005;
+  opacity: 0;
+  z-index: 400;
+  pointer-events: none;
+  animation: flicker 0.2s infinite;
+}
+
