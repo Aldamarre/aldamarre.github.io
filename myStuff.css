@@ -3,25 +3,21 @@
 }
 
 .two-column-flex {
-  display: flex; /* 1. Turn the container into a flexbox */
-  flex-wrap: wrap; /* 2. Allow items to wrap to a new line */
-  max-height: 300px; /* 3. Set a maximum height to enable scrolling */
-  overflow-y: auto; /* 4. Add a vertical scrollbar when needed */
-  gap: 10px; /* 5. Add a gap between the flex items */
+  display: flex; 
+  flex-wrap: wrap; 
+  max-height: 300px; 
+  overflow-y: auto; 
+  gap: 10px; 
 }
 
 .two-column-flex > div {
-  flex-basis: 48%; /* 6. Use a percentage for flexible column widths */
-  flex-grow: 1; /* 7. Allow items to grow to fill available space */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  flex-basis: 48%; 
+  flex-grow: 1; 
+  box-sizing: border-box; 
 }
-
-
-
 
 body {
 
-  /* Original background styles */
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 5px, transparent 5px),
     linear-gradient(rgba(0, 0, 0, 0.05) 5px, transparent 5px),
     linear-gradient(-90deg, rgba(0, 0, 0, 0.04) 2px, transparent 2px),
@@ -43,18 +39,15 @@ body {
     linear-gradient(#aaa 2px, transparent 2px), #f2f2f2;
   background-size: 4px 4px, 4px 4px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
     80px 80px, 80px 80px;
-  
-  /* Required for the background to repeat and not be fixed */
+
   background-repeat: repeat;
 
-  /* Other body styles */
   font-family: "kode Mono", monospace !important;
   font-optical-sizing: auto;
   overflow: auto;
 
-  /* Animation properties */
   animation: diagonal-pan 10s linear infinite;
-  
+
 }
 
     @font-face {
@@ -64,18 +57,20 @@ body {
         font-style: normal;
     }
 
-/* Define the keyframe animation */
 @keyframes diagonal-pan {
   0% {
     background-position: 0 0;
   }
   100% {
-    /* Shifts the background 80px right and 80px down to create a diagonal motion */
     background-position: 80px 80px;
   }
 }
 
-
+@media screen and (min-width: 1024px) {
+  .flex-item-1 {
+    height: 58em;
+  }
+}
 
 .flex-item-1 {
   height: 40em;
@@ -86,11 +81,10 @@ body {
   overflow-y: scroll;
 }
 
-
 .image-text-container {
-  display: flex; /* Enables Flexbox for the container */
-  justify-content: center; /* Horizontally centers the items */
-  gap: 20px; /* Optional: adds space between the columns */
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
 }
 
 .image-text-container div {
@@ -109,27 +103,23 @@ body {
   color: #000000;
 }
 
-
 body {
   font-family: Arial;
 }
 
-/* Style the tab container using Flexbox */
 .tab {
   display: flex;
-  flex-wrap: nowrap; /* Forces content to stay on a single line */
-  overflow-x: auto;  /* Adds a horizontal scrollbar if needed */
-  overflow-y: hidden; /* Hides vertical scrollbar */
+  flex-wrap: nowrap; 
+  overflow-x: auto;  
+  overflow-y: hidden; 
   border-bottom: 1px solid #000;
   border-right-width: 1px;  background-color: #f1f1f1;
 }
 
-/* Optional: Hide scrollbar in Webkit browsers (Chrome, Safari) */
 .tab::-webkit-scrollbar {
   display: none;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   border: none;
@@ -140,38 +130,32 @@ body {
   font-size: 17px;
   font-family: "kode Mono", monospace !important;
   border-right: 1px solid black;
-  /* Add this to prevent button text from wrapping */
+
   white-space: nowrap; 
 }
 
-/* Style the anchor tag button */
 .tab a button {
     background-color: transparent;
-    border-right: 1px solid black; /* Ensure the right border is consistent */
+    border-right: 1px solid black; 
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 } 
 
-/* Additional styling for the last button to remove the extra border */
 .tab button:last-of-type {
   border-right: none;
 }
 
-/* General styling for anchor in tab, though button styling overrides color */
 .tab a {
     color: #000000;
     text-decoration: none;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
   border: 1px solid #ccc;
@@ -194,7 +178,6 @@ element {
   scrollbar-width: none;
 }
 
-/* Removed media query for fixed layout */
 .crt::before {
   content: " ";
   display: block;
@@ -258,4 +241,3 @@ element {
   pointer-events: none;
   animation: flicker 0.2s infinite;
 }
-
