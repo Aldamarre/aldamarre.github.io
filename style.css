@@ -1,5 +1,8 @@
 *{
   scrollbar-width: none;
+  overscroll-behavior: none;
+  font-family: "kode Mono";
+
 }
 
 
