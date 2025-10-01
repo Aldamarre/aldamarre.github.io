@@ -81,6 +81,12 @@ body {
   overflow-y: scroll;
 }
 
+@media screen and (min-width: 1024px) {
+  .flex-item-1 {
+    height: 40em;
+  }
+}
+
 .image-text-container {
   display: flex;
   justify-content: center; 

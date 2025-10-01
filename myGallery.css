@@ -1,15 +1,10 @@
-*{
+* {
   scrollbar-width: none;
   overscroll-behavior: none;
   font-family: "kode Mono";
-
 }
 
-
-
-
 body {
-
   /* Original background styles */
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 5px, transparent 5px),
     linear-gradient(rgba(0, 0, 0, 0.05) 5px, transparent 5px),
@@ -32,7 +27,7 @@ body {
     linear-gradient(#aaa 2px, transparent 2px), #f2f2f2;
   background-size: 4px 4px, 4px 4px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
     80px 80px, 80px 80px;
-  
+
   /* Required for the background to repeat and not be fixed */
   background-repeat: repeat;
 
@@ -45,7 +40,6 @@ body {
   animation: diagonal-pan 10s linear infinite;
 }
 
-
 /* Define the keyframe animation */
 @keyframes diagonal-pan {
   0% {
@@ -57,20 +51,10 @@ body {
   }
 }
 
-
-
-
-.homeheader{
+.homeheader {
   margin-top: 15px;
 }
 
-
-
-@media screen and (min-width: 1024px) {
-  .flex-item-1 {
-    height: 40em;
-  }
-}
 
 .flex-item-1 {
   height: 58em;
@@ -81,6 +65,11 @@ body {
   overflow-y: scroll;
 }
 
+@media screen and (min-width: 1024px) {
+  .flex-item-1 {
+    height: 40em;
+  }
+}
 
 body {
   font-family: Arial;
@@ -92,7 +81,6 @@ body {
   border: 1px solid #000000;
   background-color: #f1f1f1;
 }
-
 
 /* Style the buttons inside the tab */
 .tab button {
@@ -126,9 +114,7 @@ body {
   border-top: none;
 }
 
-.ib-icon
-
-.HEAD  {
+.ib-icon .HEAD {
   width: 0px -important;
   height: 0px -important;
 }
@@ -204,4 +190,3 @@ element {
   pointer-events: none;
   animation: flicker 0.2s infinite;
 }
-
