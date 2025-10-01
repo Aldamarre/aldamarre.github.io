@@ -71,7 +71,7 @@ body {
 
 
 .flex-item-1 {
-  height: 650px;
+  height: 50%;
   width: 580px;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
