@@ -57,15 +57,17 @@ body {
 
 
 .flex-item-1 {
-  height: 58em;
-  width: 580px;
+  height: 40em;
+  width: 50%;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
   margin-right: 5px;
   overflow-y: scroll;
 }
 
-@media screen and (min-width: 1024px) {
+
+
+@media screen and (max-width: 1024px) {
   .flex-item-1 {
     height: 55em;
   }
