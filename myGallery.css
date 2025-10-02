@@ -65,7 +65,7 @@ body {
   overflow-y: scroll;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .flex-item-1 {
     height: 55em;
   }
