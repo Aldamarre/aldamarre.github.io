@@ -58,7 +58,7 @@ body {
 
 .flex-item-1 {
   height: 40em;
-  width: 50%;
+  width: auto;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
   margin-right: 5px;
@@ -66,10 +66,10 @@ body {
 }
 
 
-
 @media screen and (max-width: 1024px) {
   .flex-item-1 {
     height: 55em;
+    width: auto;
   }
 }
 
