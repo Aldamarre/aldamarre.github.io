@@ -77,7 +77,7 @@ var songLabel = document.getElementById("songLabel");
 var statusLabel = document.getElementById("statusLabel");
 var statusLabelInterval;
 
-var savedVolume = 50;
+var savedVolume = 10;
 var volumeButton = document.getElementById("volumeButton");
 volumeButton.innerHTML = "<img src='./themes/" + myThemes[currentTheme] + "/images/sound.png' alt=''>";
 var volumeBar = document.getElementById("volumeBar");
@@ -329,7 +329,7 @@ themeSelector.addEventListener("change", function() {
 
 function onPlayerReady(event) {
     player.loadPlaylist({ list: myPlaylists[currentPlaylist] });
-    player.setVolume(50);
+    player.setVolume(10);
     player.setLoop(true);
 }
 
