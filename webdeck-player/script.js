@@ -23,7 +23,7 @@
  * You can also delete the lists that you don't want.
 */
 var myPlaylists = {
-  "liked songs": "PLvlah69O2Ck21Ex3bQkioEbMdncYwLtHr",
+  "liked songs": "PLvlah69O2Ck1q41jcpG93e-griua2_y4d",
   //"00s HITS": "PL69714D95619E327E",
   //VAPORWAVE: "PLSChV4T8EDb9TZsLO23Tsj6-UUyAXtGg5",
   //"ANOTHER PLAYLIST": 'PLZyqOyXxaVETqpHhT_c5GPmAPzhJpJ5K7',
@@ -139,6 +139,8 @@ function onYouTubeIframeAPIReady() {
     }
     });
 }
+
+
 
 function updateSongLabel() {
     if(player.getVideoData() && player.getVideoData().title != undefined){
