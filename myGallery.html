@@ -59,29 +59,14 @@
     background-color: #ffffff;
   }
 
-  .preview {
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%; 
-    background-color: #ffffff;
-    margin-top: -90px;
-  }
-
-  .preview #preview-img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
+ 
 
 .gallery-container {
     display: flex;
     flex-wrap: wrap; 
     padding: 0 4px; 
     width: 500px;
-    height:900px; 
+    height:45vw; 
     overflow-y: auto;
 }
 
@@ -100,6 +85,8 @@
     width: 100%;
     margin-top: 8px;
     vertical-align: middle;
+        border: 1px solid #000000;
+
 }
 
   .column img:hover {
@@ -109,10 +96,6 @@
   }
 
 
-  img {
-
-    border: 1px solid #000000;
-  }
 
 
   @media screen and (max-width: 800px) {
@@ -162,7 +145,7 @@
       <div class="row">
 
         <div class="preview">
-          <img id="preview-img" style="width: 90%; border: 2px solid;"></img>
+          <img id="preview-img" style="height: 100%; width: 99vw"></img>
         </div>
 
         <div class="gallery-container" style="width: 50%; padding-bottom:10%;">
