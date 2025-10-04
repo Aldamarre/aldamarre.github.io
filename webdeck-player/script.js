@@ -77,7 +77,7 @@ var songLabel = document.getElementById("songLabel");
 var statusLabel = document.getElementById("statusLabel");
 var statusLabelInterval;
 
-var savedVolume = 10;
+var savedVolume = 5;
 var volumeButton = document.getElementById("volumeButton");
 volumeButton.innerHTML = "<img src='./themes/" + myThemes[currentTheme] + "/images/sound.png' alt=''>";
 var volumeBar = document.getElementById("volumeBar");
@@ -203,7 +203,7 @@ function updateStatusLabel() {
 function formatTime(input) {
     var minutes = Math.trunc(input / 60);
     var seconds = Math.trunc(input - minutes * 60);
-    if(seconds < 10) {
+    if(seconds < 5) {
     return minutes + ":0" + seconds;
     }
     else {
@@ -331,7 +331,7 @@ themeSelector.addEventListener("change", function() {
 
 function onPlayerReady(event) {
     player.loadPlaylist({ list: myPlaylists[currentPlaylist] });
-    player.setVolume(10);
+    player.setVolume(1);
     player.setLoop(true);
 }
 
