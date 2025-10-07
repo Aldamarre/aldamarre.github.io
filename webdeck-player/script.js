@@ -23,7 +23,7 @@
  * You can also delete the lists that you don't want.
 */
 var myPlaylists = {
-  "liked songs": "PLvlah69O2Ck21Ex3bQkioEbMdncYwLtHr",
+  "liked songs": "PLvlah69O2Ck1q41jcpG93e-griua2_y4d",
   //"00s HITS": "PL69714D95619E327E",
   //VAPORWAVE: "PLSChV4T8EDb9TZsLO23Tsj6-UUyAXtGg5",
   //"ANOTHER PLAYLIST": 'PLZyqOyXxaVETqpHhT_c5GPmAPzhJpJ5K7',
@@ -77,7 +77,7 @@ var songLabel = document.getElementById("songLabel");
 var statusLabel = document.getElementById("statusLabel");
 var statusLabelInterval;
 
-var savedVolume = 10;
+var savedVolume = 5;
 var volumeButton = document.getElementById("volumeButton");
 volumeButton.innerHTML = "<img src='./themes/" + myThemes[currentTheme] + "/images/sound.png' alt=''>";
 var volumeBar = document.getElementById("volumeBar");
@@ -140,6 +140,8 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
+
+
 function updateSongLabel() {
     if(player.getVideoData() && player.getVideoData().title != undefined){
         if(player.getVideoData().title == ""){
@@ -201,7 +203,7 @@ function updateStatusLabel() {
 function formatTime(input) {
     var minutes = Math.trunc(input / 60);
     var seconds = Math.trunc(input - minutes * 60);
-    if(seconds < 10) {
+    if(seconds < 5) {
     return minutes + ":0" + seconds;
     }
     else {
@@ -329,7 +331,7 @@ themeSelector.addEventListener("change", function() {
 
 function onPlayerReady(event) {
     player.loadPlaylist({ list: myPlaylists[currentPlaylist] });
-    player.setVolume(10);
+    player.setVolume(1);
     player.setLoop(true);
 }
 
