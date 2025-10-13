@@ -61,6 +61,13 @@ body {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 390px) {
+  .flex-item-1 {
+    height: 67vh;
+    width: 77vw;
+  }
+}
+
 .container3 {
   display: flex;
   justify-content: center;
