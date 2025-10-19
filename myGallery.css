@@ -259,7 +259,12 @@ element {
   }
 
   .preview #preview-img {
-    max-width: 30vw !important;
+    max-width: 300vw !important;
+    display: flex;
+  }
+
+  #preview-img {
+    justify-content: center
   }
   
   .flex-item-1 {
