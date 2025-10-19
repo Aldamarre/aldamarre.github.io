@@ -259,8 +259,7 @@ element {
   }
 
   .preview #preview-img {
-    max-width: 300vw !important;
-    display: flex;
+    max-width: 20vw !important;
   }
 
   #preview-img {
@@ -268,7 +267,7 @@ element {
   }
   
   .flex-item-1 {
-    width: 4001.12px !important;
+    width: 30vw !important;
     zoom: 3!important;
     margin-left: 0px!important;
     margin-right: 0px!important;
