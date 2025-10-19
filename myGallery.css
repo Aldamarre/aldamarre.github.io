@@ -259,7 +259,7 @@ element {
   }
 
   .preview #preview-img {
-    max-width: 28vw !important;
+    max-width: 27vw !important;
   }
 
 
@@ -267,6 +267,7 @@ element {
     width: 30vw !important;
     margin-left: 0px!important;
     margin-right: 0px!important;
+    zoom: 3;
   }
 
   .tab button{
