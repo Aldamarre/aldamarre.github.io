@@ -262,13 +262,9 @@ element {
     max-width: 28vw !important;
   }
 
-  #preview-img {
-    justify-content: center
-  }
-  
+
   .flex-item-1 {
     width: 30vw !important;
-    zoom: 2!important;
     margin-left: 0px!important;
     margin-right: 0px!important;
   }
