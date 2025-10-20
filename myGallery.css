@@ -271,6 +271,12 @@ element {
   }
 
   .tab button{
-    border-left: 0px;
+    border-left: 0px!important;
+    height: 30px!important;
+    font-size: .57vh!important;
+    
   }
+
+  .tab{
+  height: 30px !important;}
 }
