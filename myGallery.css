@@ -73,9 +73,17 @@ body {
   margin-top: 0;
 }
 .preview #preview-img {
+  display: block;
+  margin: 0 auto;
   max-width: 40vw;
   max-height: 60vh;
   object-fit: contain;
+}
+
+/* ensure the preview container is centered horizontally */
+.preview {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 body {
@@ -249,7 +257,6 @@ element {
   animation: flicker 0.2s infinite;
 }
 
-
 @media only screen and (max-width: 119em) and (min-height: 844px) {
   .gallery-container {
     width: 100% !important;
@@ -260,21 +267,25 @@ element {
 
   .preview #preview-img {
     max-width: 100% !important;
-    display: flex;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
   }
 
-  #preview-img {
-    justify-content: center
+  .preview {
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .flex-item-1 {
-    width: 70VW !important;
-    margin-left: 0px!important;
-    margin-right: 0px!important;
+    width: 70vw !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
-  .tab button{
+  .tab button {
     font-size: 12px !important;
+    width: 90px !important;
   }
 
   * {
