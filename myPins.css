@@ -220,7 +220,7 @@ element {
 
 @media only screen and (max-width: 119em) and (min-height: 844px) {
   .flex-item-1 {
-    width: 100vw !important;
+    width: 100% !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
