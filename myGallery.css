@@ -259,24 +259,28 @@ element {
   }
 
   .preview #preview-img {
-    max-width: 28vw !important;
+    max-width: 100% !important;
+    display: flex;
   }
 
-
+  #preview-img {
+    justify-content: center
+  }
+  
   .flex-item-1 {
-    width: 30vw !important;
+    width: 31VW !important;
+    zoom: 3!important;
     margin-left: 0px!important;
     margin-right: 0px!important;
-    zoom: 3;
   }
 
   .tab button{
-    border-left: 0px!important;
-    height: 30px!important;
-    font-size: .57vh!important;
-    
+    border-left: 0px;
+    height: fit-content!important;
+    font-size: 12px!important;
   }
 
-  .tab{
-  height: 30px !important;}
+  .tab  {
+    height: 1.3vh!important;
+  }
 }
