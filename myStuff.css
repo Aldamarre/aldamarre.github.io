@@ -242,6 +242,8 @@ element {
 
 @media only screen and (max-width: 119em) and (min-height: 844px) {
   .flex-item-1 {
-    height: auto;
+    height: 43vh;
+    width: 70%;
   }
+
 }
