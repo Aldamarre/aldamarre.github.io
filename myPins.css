@@ -70,7 +70,6 @@ body {
 
 .flex-item-1 {
   height: 95vh;
-  /* emulate margin-left:100px and margin-right:100px by reducing width and centering */
   width: calc(100% - 200px);
   max-width: 1200px;
   border: 1px solid black;
@@ -79,7 +78,6 @@ body {
   overflow-y: scroll;
 }
 
-/* responsive fallback: reduce side spacing on small screens */
 @media (max-width: 900px) {
   .flex-item-1 {
     width: calc(100% - 8vw);

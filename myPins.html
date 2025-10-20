@@ -152,12 +152,10 @@
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
-        // Show requested tab
         var tab = document.getElementById(cityName);
         tab.style.display = "block";
         evt.currentTarget.className += " active";
 
-        // Lazy-load any iframes inside the tab: set src from data-src when opening
         var iframes = tab.getElementsByTagName('iframe');
         for (i = 0; i < iframes.length; i++) {
           var frame = iframes[i];
@@ -171,12 +169,11 @@
       document.getElementById("defaultOpen").click();
     </script>
     <script>
-      // Make the tab bar horizontally scrollable with the mouse wheel / trackpad (like myStuff)
       (function () {
         var scrollContainer = document.querySelector('.tab');
         if (scrollContainer && scrollContainer.addEventListener) {
           scrollContainer.addEventListener('wheel', function (event) {
-            // Only handle horizontal scrolling intention
+            
             event.preventDefault();
             scrollContainer.scrollLeft += event.deltaY;
           }, { passive: false });
