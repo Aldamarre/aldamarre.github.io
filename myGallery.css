@@ -261,11 +261,15 @@ element {
     display: block;
     margin: 0 auto;
     object-fit: contain;
+    border: oldlace 200px solid;
   }
 
   .preview {
     justify-content: center;
     align-items: center;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-block-color: white;
   }
 
   .flex-item-1 {
