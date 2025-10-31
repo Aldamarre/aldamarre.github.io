@@ -4,6 +4,16 @@
   font-family: "kode Mono";
 }
 
+.two-column-flex {
+  display: flex;
+  flex-wrap: wrap; 
+  max-height: 300px; 
+  overflow-y: auto; 
+  gap: 10px;
+}
+
+
+
 body {
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 5px, transparent 5px),
     linear-gradient(rgba(0, 0, 0, 0.05) 5px, transparent 5px),
@@ -45,43 +55,30 @@ body {
   }
 }
 
-.homeheader {
-  margin-top: 15px;
-}
 
-.flex-item-1 {
-  height: auto;
-  max-height: 95vh;
-  width: 1570px;
-  border: 1px solid black;
-  background-color: rgb(255, 255, 255);
-  margin-right: 5px;
-  overflow-y: auto;
-}
-
-.preview {
-  padding-top: 1.5rem;
-  width: fit-content;
-  height: fit-content;
-  background-color: #ffffff;
+.container3 {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 40vw;
-  background-color: #ffffff;
-  margin-top: 0;
-}
-.preview #preview-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 40vw;
-  max-height: 60vh;
-  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-.preview {
-  margin-left: auto !important;
-  margin-right: auto !important;
+
+
+.flex-item-6 {
+  width: 891px;
+  max-width: 100%;
+  /* Allow the container to grow up to the viewport height minus the tab area.
+    Replace the previous fixed height so overflowing books stay inside and
+    a scrollbar appears when needed. */
+  max-height: calc(100vh - 80px);
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin: 0 auto;
+  /* remove top padding so the tab can sit flush against the top border;
+    keep side + bottom padding for spacing inside the container */
+  padding: 0 12px 12px;
 }
 
 body {
@@ -91,57 +88,22 @@ body {
 .tab {
   overflow: hidden;
   border: 1px solid #000000;
-
-  @media only screen and (max-width: 420px),
-    only screen and (max-device-width: 420px) {
-    html,
-    body {
-      font-size: 18px !important;
-    }
-
-    .flex-item-1 {
-      width: 92vw !important;
-      margin-left: 4vw !important;
-      margin-right: 4vw !important;
-    }
-
-    .preview {
-      width: 100% !important;
-      max-width: 100% !important;
-      padding-top: 1rem !important;
-      padding-right: 0.5rem !important;
-    }
-
-    .preview #preview-img {
-      max-width: 90vw !important;
-      max-height: 60vh !important;
-    }
-
-    .gallery-container {
-      width: 100% !important;
-      padding-bottom: 1rem !important;
-      margin-top: 0.75rem !important;
-      height: auto !important;
-    }
-
-    .column {
-      flex: 50% !important;
-      max-width: 50% !important;
-      padding-bottom: 1rem !important;
-    }
-
-    .column img {
-      width: 100% !important;
-      height: auto !important;
-    }
-
-    .tab button,
-    button {
-      font-size: 20px !important;
-      padding: 12px 16px !important;
-    }
-  }
   background-color: #f1f1f1;
+  /* keep the tab bar visible when .flex-item-6 scrolls */
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  /* make the tab span the full container border edges (flush to left/right)
+     since .flex-item-6 uses horizontal padding for inner spacing */
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  box-sizing: border-box;
+}
+
+/* move the bookshelf content down so it doesn't sit under the tab */
+.flex-item-6 .bookshelf {
+  padding-top: 12px;
 }
 
 .tab button {
@@ -183,6 +145,7 @@ element {
   margin-right: 0px;
   scrollbar-width: none;
 }
+
 
 .crt::before {
   content: " ";
@@ -246,40 +209,4 @@ element {
   z-index: 400;
   pointer-events: none;
   animation: flicker 0.2s infinite;
-}
-
-@media only screen and (max-width: 119em) and (min-height: 844px) {
-  .gallery-container {
-    width: 100% !important;
-    padding-bottom: 0 !important;
-    margin-top: 10px !important;
-    height: 230px !important;
-  }
-
-  .preview #preview-img {
-    max-width: 100% !important;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-
-  .preview {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .flex-item-1 {
-    width: 70vw !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-
-  .tab button {
-    font-size: 12px !important;
-    width: 90px !important;
-  }
-
-  * {
-    font-size: 12px !important;
-  }
 }

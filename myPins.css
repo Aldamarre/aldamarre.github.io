@@ -120,6 +120,16 @@ body {
   background-color: #f1f1f1;
 }
 
+/* keep the tab bar visible while the .flex-item-1 scrolls */
+.tab {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  /* expose a CSS variable for the tab height so the ticker can sit beneath */
+  --tab-height: 48px;
+}
+
 .tab::-webkit-scrollbar {
   display: none;
 }
@@ -149,6 +159,14 @@ body {
   display: none;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+/* keep the news ticker pinned just under the tab bar */
+.news-ticker-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--tab-height, 48px);
+  z-index: 25;
 }
 
 .ib-icon .HEAD {
