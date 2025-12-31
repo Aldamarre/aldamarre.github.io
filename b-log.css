@@ -6,6 +6,17 @@
      box-shadow: 1px 3px 4px #807e76;
      color: #392104;
 }
+
+.narratechristmas {
+     border: 1px solid #000000;
+     padding: 10px;
+     margin: 10px;
+     background: linear-gradient(to bottom, rgb(114, 31, 31) 0%, rgba(224, 0, 0, 0.699) 100%);
+     box-shadow: 1px 3px 4px #807e76;
+     color: #ffffff;
+}
+
+
  .investigate {
      border-left: 3px solid #303823;
      padding: 10px;

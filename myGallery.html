@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=safari" />
   <title></title>
-  <meta name="viewport"> 
+  <meta name="viewport">
   <link rel="stylesheet" href="myGallery.css" />
   <link rel="stylesheet" href=hover.css>
   <div class="crt"></div>
@@ -44,7 +44,7 @@
     font-family: kode-mono;
   }
 
- 
+
 
   button {
     font-family: kode-mono;
@@ -59,57 +59,70 @@
     align-items: flex-start;
     gap: 16px;
     background-color: #ffffff;
-    overflow-x: auto;
+    overflow-x: visible;
   }
 
- 
 
-.gallery-container {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0 4px;
-  width: 1200px;
-  height: auto;
-  max-height: 70vh;
-  overflow-x: auto;
-  overflow-y: auto;
-}
 
-.gallery-container .column {
+  .gallery-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 4px;
+    flex: 1 1 auto;
+    /* grow/shrink to available space */
+    min-width: 0;
+    /* allow it to be smaller than content */
+    height: auto;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-container .column {
     display: flex;
     flex-direction: column;
   }
-.column {
-  flex: 0 0 300px;
-  max-width: 300px;
-  padding: 0 4px;
-  padding-bottom: 1.5rem;
-  box-sizing: border-box;
-} 
 
-.column img {
+  .column {
+    flex: 1 1 200px;
+    /* grow/shrink; start at 200px */
+    min-width: 200px;
+    /* don't get too small */
+    max-width: 300px;
+    padding: 0 4px;
+    padding-bottom: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .column img {
     width: 100%;
     margin-top: 8px;
     vertical-align: middle;
-        border: 1px solid #000000;
-
-}
+    border: 1px solid #000000;
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
 
   .column img:hover {
     border-style: dotted;
     border-color: rgb(0, 0, 0);
-    border-width: 2px ;
+    border-width: 2px;
   }
 
-
-
-
-
+  .main-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 </style>
 
 <body>
-
-  <div class="flex-item-1" style=" margin-left: 100px; margin-right: 100px; overflow: visible;">
+  <div class="flex-item-1" style="margin-left: 100px; margin-right: 100px; overflow: visible;">
     <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
@@ -117,7 +130,7 @@
             border-top-width: 0px;
             position: sticky; top: 0;
           ">
-     <a href="index.html" style="color: #000000; text-decoration: none;">
+      <a href="index.html" style="color: #000000; text-decoration: none;">
         <button style="font-size: 17px; font-weight: bolder;">
           &lt;- Back
         </button>
@@ -130,15 +143,15 @@
 
     <div style="padding: 10px; display: right;">
 
-  <div class="row">
+      <div class="row">
 
         <div class="preview">
           <img id="preview-img" alt="Preview image">
         </div>
 
-  <div class="gallery-container" style="width: 1200px; padding-bottom:2rem; overflow-x:auto;">
+        <div class="gallery-container" style="padding-bottom:2rem;">
           <div class="column">
-  
+
             <img src="/myGallery/image.webp">
             <img src="/myGallery/IMG_0048.webp">
             <img src="/myGallery/IMG_1704.webp">
@@ -162,7 +175,7 @@
           </div>
           <div class="column">
             <img src="/myGallery/20241025_132404.webp" loading="lazy">
-            <img src="/myGallery/IMG_2050.webp" loading="lazy"  >
+            <img src="/myGallery/IMG_2050.webp" loading="lazy">
             <img src="/myGallery/IMG_0152.webp" loading="lazy">
             <img src="/myGallery/IMG_0559.webp" loading="lazy">
             <img src="/myGallery/IMG_5623.webp" loading="lazy">
@@ -174,33 +187,36 @@
           </div>
           <div class="column">
             <img src="/myGallery/cachedImage(1).webp" loading="lazy">
-            <img src="/myGallery/IMG_1212.webp" loading="lazy" >
-            <img src="/myGallery/IMG_2832.webp"loading="lazy">
-            <img src="/myGallery/IMG_9100.webp" loading="lazy" >
-            <img src="/myGallery/IMG_8131.webp"loading="lazy" >
-            <img src="/myGallery/IMG_1011.webp"loading="lazy" >
+            <img src="/myGallery/IMG_1212.webp" loading="lazy">
+            <img src="/myGallery/IMG_2832.webp" loading="lazy">
+            <img src="/myGallery/IMG_9100.webp" loading="lazy">
+            <img src="/myGallery/IMG_8131.webp" loading="lazy">
+            <img src="/myGallery/IMG_1011.webp" loading="lazy">
             <img src="/myGallery/IMG_9330.webp" loading="lazy">
           </div>
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
 
-            const thumbnails = document.querySelectorAll('.column img');
+              const thumbnails = document.querySelectorAll('.column img');
 
-            const previewImg = document.getElementById('preview-img');
+              const previewImg = document.getElementById('preview-img');
 
-            if (thumbnails.length > 0) {
-              previewImg.src = thumbnails[0].src;
-            }
+              if (thumbnails.length > 0) {
+                previewImg.src = thumbnails[0].src;
+              }
 
-            thumbnails.forEach(thumbnail => {
-              thumbnail.addEventListener('click', (event) => {
-                const clickedImageSrc = event.target.src;
-                previewImg.src = clickedImageSrc;
+              thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', (event) => {
+                  const clickedImageSrc = event.target.src;
+                  previewImg.src = clickedImageSrc;
+                });
               });
             });
-          });
-        </script>
+          </script>
+        </div>
       </div>
+    </div>
+  </div>
 </body>
 
 </html>
