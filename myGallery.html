@@ -69,9 +69,7 @@
     flex-wrap: nowrap;
     padding: 0 4px;
     flex: 1 1 auto;
-    /* grow/shrink to available space */
     min-width: 0;
-    /* allow it to be smaller than content */
     height: auto;
     max-height: 70vh;
     overflow-x: visible;
@@ -87,9 +85,7 @@
 
   .column {
     flex: 1 1 200px;
-    /* grow/shrink; start at 200px */
     min-width: 200px;
-    /* don't get too small */
     max-width: 300px;
     padding: 0 4px;
     padding-bottom: 1.5rem;
@@ -122,7 +118,7 @@
 </style>
 
 <body>
-  <div class="flex-item-1" style="margin-left: 100px; margin-right: 100px; overflow: visible;">
+  <div class="flex-item-1" style=" margin: 0 auto; max-width: 95%; overflow: visible;">
     <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
@@ -149,7 +145,7 @@
           <img id="preview-img" alt="Preview image">
         </div>
 
-        <div class="gallery-container" style="padding-bottom:2rem;">
+        <div class="gallery-container" style="padding-bottom:2rem;" aria-label="Image gallery">
           <div class="column">
 
             <img src="/myGallery/image.webp">
@@ -206,9 +202,17 @@
               }
 
               thumbnails.forEach(thumbnail => {
-                thumbnail.addEventListener('click', (event) => {
-                  const clickedImageSrc = event.target.src;
-                  previewImg.src = clickedImageSrc;
+                const setPreview = (src) => { previewImg.src = src; };
+                thumbnail.tabIndex = 0;
+                thumbnail.setAttribute('role', 'button');
+                thumbnail.addEventListener('click', (event) => setPreview(event.target.src));
+                thumbnail.addEventListener('pointerup', (event) => setPreview(event.target.src));
+                thumbnail.addEventListener('touchend', (event) => setPreview(event.target.src));
+                thumbnail.addEventListener('keydown', (event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setPreview(event.target.src);
+                  }
                 });
               });
             });
