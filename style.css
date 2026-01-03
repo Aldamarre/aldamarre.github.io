@@ -189,6 +189,7 @@ body {
   background-color: rgb(255, 255, 255);
   margin-right: 5px;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 .flex-item-2 {
@@ -460,39 +461,6 @@ element {
   }
 }
 
-@media (max-width: 420px) {
-  html,
-  body {
-    font-size: 14px;
-  }
-  .image-text-container img {
-    width: 55%;
-  }
-  .tab button {
-    padding: 8px;
-    font-size: 15px;
-  }
-  .flex-item-1 {
-    margin: 0;
-    padding: 8px;
-  }
-  .img2 {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  .img1 {
-    height: 118px !important;
-  }
-  .swatch {
-    display: none !important;
-  }
-
-  .container2 .flex-item-4,
-  .container2 .flex-item-5 {
-    width: 100%;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -501,3 +469,4 @@ img {
 .iframe-container {
   max-width: 100%;
 }
+
