@@ -103,10 +103,12 @@
     touch-action: manipulation;
   }
 
+  img {
+  transition: transform 6.3s ease; /* Smooth transition */
+}
   .column img:hover {
-    border-style: dotted;
     border-color: rgb(0, 0, 0);
-    border-width: 2px;
+    border-width: 1px;
   }
 
   .main-container {
@@ -118,7 +120,7 @@
 </style>
 
 <body>
-  <div class="flex-item-1" style=" margin: 0 auto; max-width: 95%; overflow: visible;">
+  <div class="flex-item-1" style=" margin: 0 auto; max-width: fit-content; overflow: visible;">
     <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
@@ -142,82 +144,52 @@ padding-top: 05px;">
 
       <div class="row">
 
-        <div class="preview">
-          <img id="preview-img" alt="Preview image">
-        </div>
-
         <div class="gallery-container" style="padding-bottom:2rem;" aria-label="Image gallery">
           <div class="column">
 
-            <img src="/myGallery/image.webp">
-            <img src="/myGallery/IMG_0048.webp">
-            <img src="/myGallery/IMG_1704.webp">
-            <img src="/myGallery/IMG_1711.webp">
-            <img src="/myGallery/IMG_1705.webp">
-            <img src="/myGallery/IMG_8461.webp">
-            <img src="/myGallery/IMG_0432.webp">
+           <a href="/myGallery/image.webp" target="_blank"><img src="/myGallery/image.webp"> </a>
+            <a href="/myGallery/IMG_0048.webp" target="_blank"><img src="/myGallery/IMG_0048.webp"> </a>
+            <a href="/myGallery/IMG_1704.webp" target="_blank"><img src="/myGallery/IMG_1704.webp"> </a>
+            <a href="/myGallery/IMG_1711.webp" target="_blank"><img src="/myGallery/IMG_1711.webp"> </a>
+            <a href="/myGallery/IMG_1705.webp" target="_blank"><img src="/myGallery/IMG_1705.webp"> </a>
+            <a href="/myGallery/IMG_8461.webp" target="_blank"><img src="/myGallery/IMG_8461.webp"> </a>
+            <a href="/myGallery/IMG_0432.webp" target="_blank"><img src="/myGallery/IMG_0432.webp"> </a>
 
           </div>
           <div class="column">
-            <img src="/myGallery/IMG_0790.webp" loading="lazy">
-            <img src="/myGallery/IMG_1802.webp" loading="lazy">
-            <img src="/myGallery/IMG_5608.webp" loading="lazy">
-            <img src="/myGallery/IMG_0386.webp" loading="lazy">
-            <img src="/myGallery/IMG_0571.webp" loading="lazy">
-            <img src="/myGallery/IMG_3382.webp" loading="lazy">
-            <img src="/myGallery/IMG_1384.webp" loading="lazy">
-            <img src="/myGallery/IMG_0307.webp" loading="lazy">
-            <img src="/myGallery/cachedImage(3).webp" loading="lazy">
+            <a href="/myGallery/IMG_0790.webp" target="_blank"><img src="/myGallery/IMG_0790.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1802.webp" target="_blank"><img src="/myGallery/IMG_1802.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_5608.webp" target="_blank"><img src="/myGallery/IMG_5608.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_0386.webp" target="_blank"><img src="/myGallery/IMG_0386.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_0571.webp" target="_blank"><img src="/myGallery/IMG_0571.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_3382.webp" target="_blank"><img src="/myGallery/IMG_3382.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1384.webp" target="_blank"><img src="/myGallery/IMG_1384.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_0307.webp" target="_blank"><img src="/myGallery/IMG_0307.webp" loading="lazy"></a>
+            <a href="/myGallery/cachedImage(3).webp" target="_blank"><img src="/myGallery/cachedImage(3).webp" loading="lazy"></a>
 
           </div>
           <div class="column">
-            <img src="/myGallery/20241025_132404.webp" loading="lazy">
-            <img src="/myGallery/IMG_2050.webp" loading="lazy">
-            <img src="/myGallery/IMG_0152.webp" loading="lazy">
-            <img src="/myGallery/IMG_0559.webp" loading="lazy">
-            <img src="/myGallery/IMG_5623.webp" loading="lazy">
-            <img src="/myGallery/IMG_9422.webp" loading="lazy">
-            <img src="/myGallery/IMG_1386.webp" loading="lazy">
-            <img src="/myGallery/IMG_1499.webp" loading="lazy">
-            <img src="/myGallery/cachedImage(2).webp" loading="lazy">
+            <a href="/myGallery/20241025_132404.webp" target="_blank"><img src="/myGallery/20241025_132404.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_2050.webp" target="_blank"><img src="/myGallery/IMG_2050.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_0152.webp" target="_blank"><img src="/myGallery/IMG_0152.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_0559.webp" target="_blank"><img src="/myGallery/IMG_0559.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_5623.webp" target="_blank"><img src="/myGallery/IMG_5623.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_9422.webp" target="_blank"><img src="/myGallery/IMG_9422.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1386.webp" target="_blank"><img src="/myGallery/IMG_1386.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1499.webp" target="_blank"><img src="/myGallery/IMG_1499.webp" loading="lazy"></a>
+            <a href="/myGallery/cachedImage(2).webp" target="_blank"><img src="/myGallery/cachedImage(2).webp" loading="lazy"></a>
 
           </div>
           <div class="column">
-            <img src="/myGallery/cachedImage(1).webp" loading="lazy">
-            <img src="/myGallery/IMG_1212.webp" loading="lazy">
-            <img src="/myGallery/IMG_2832.webp" loading="lazy">
-            <img src="/myGallery/IMG_9100.webp" loading="lazy">
-            <img src="/myGallery/IMG_8131.webp" loading="lazy">
-            <img src="/myGallery/IMG_1011.webp" loading="lazy">
-            <img src="/myGallery/IMG_9330.webp" loading="lazy">
+            <a href="/myGallery/cachedImage(1).webp" target="_blank"><img src="/myGallery/cachedImage(1).webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1212.webp" target="_blank"><img src="/myGallery/IMG_1212.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_2832.webp" target="_blank"><img src="/myGallery/IMG_2832.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_9100.webp" target="_blank"><img src="/myGallery/IMG_9100.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_8131.webp" target="_blank"><img src="/myGallery/IMG_8131.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_1011.webp" target="_blank"><img src="/myGallery/IMG_1011.webp" loading="lazy"></a>
+            <a href="/myGallery/IMG_9330.webp" target="_blank"><img src="/myGallery/IMG_9330.webp" loading="lazy"></a>
           </div>
-          <script>
-            document.addEventListener('DOMContentLoaded', () => {
-
-              const thumbnails = document.querySelectorAll('.column img');
-
-              const previewImg = document.getElementById('preview-img');
-
-              if (thumbnails.length > 0) {
-                previewImg.src = thumbnails[0].src;
-              }
-
-              thumbnails.forEach(thumbnail => {
-                const setPreview = (src) => { previewImg.src = src; };
-                thumbnail.tabIndex = 0;
-                thumbnail.setAttribute('role', 'button');
-                thumbnail.addEventListener('click', (event) => setPreview(event.target.src));
-                thumbnail.addEventListener('pointerup', (event) => setPreview(event.target.src));
-                thumbnail.addEventListener('touchend', (event) => setPreview(event.target.src));
-                thumbnail.addEventListener('keydown', (event) => {
-                  if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    setPreview(event.target.src);
-                  }
-                });
-              });
-            });
-          </script>
+         
         </div>
       </div>
     </div>

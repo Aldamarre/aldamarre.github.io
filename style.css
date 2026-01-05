@@ -10,6 +10,10 @@
   max-height: 300px;
   overflow-y: auto;
   gap: 10px;
+    height: 300px;
+  border-bottom-style: solid;
+  padding-bottom: 64px;
+  border-bottom-width: 0px;
 }
 
 .two-column-flex > div {
@@ -292,6 +296,8 @@ body {
   overflow: hidden;
   border: 1px solid #000000;
   background-color: #f1f1f1;
+    position: inherit;
+
 }
 
 .tab button {
