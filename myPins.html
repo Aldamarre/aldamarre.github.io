@@ -19,7 +19,6 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
   </style>
-  <div class="container1">
     <div class="flex-item-1">
       <div class="tab" style="
             border-bottom-width: 1px;
@@ -67,7 +66,9 @@
           box-sizing: border-box;
         }
 
-
+          *{
+            overscroll-behavior-y: none;
+          }
         .news-ticker-text {
           display: inline-block;
           padding-left: 100%;
@@ -106,35 +107,34 @@
       <div>
       </div>
 
-      <div id="Character-design" class="tabcontent"
-        style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px; height: 100%;">
-        <iframe class=character-design"
+      <div id="Character-design" class="tabcontent">
+        <iframe class="character-design"
           src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/character-design&amp;hideHeader=1&amp;hideFooter=1&amp;transparent=1"
           loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width:100%; height: 174vw;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid; border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+            style="width: 100%; border: 0;">></iframe>
       </div>
 
       <div id="Apparel" class="tabcontent"
-        style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px; padding-left: 0px; margin-right: 0px; height: 100%;">
+        >
         <iframe
           data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/apparel&amp/&hideHeader=1&hideFooter=1&transparent=0"
           loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width:100%; height: 170vw;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;border-bottom-style: solid;"></iframe>
+          style="width: 100%; border: 0;"></iframe>
       </div>
 
       <div id="People" class="tabcontent"
-        style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px; height: 100%;">
+        >
         <iframe
           data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/people/&hideHeader=1&hideFooter=1&transparent=1"
           loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width:100%; height: 173vw;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;"></iframe>
+         style="width: 100%; border: 0;"></iframe>
       </div>
       <div id="Raining" class="tabcontent"
-        style="display: block; width: auto; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; height: 850px;padding-left: 0px;margin-right: 0px; height: 100%;">
+       >
         <iframe class="raining"
           data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/raining-cats-and-dogs&hideHeader=1&hideFooter=1&transparent=1"
           loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width:100%; height: 91vw;border-top-width: 0px;border-top-style: solid;border-right-width: 0px;border-right-style: solid;border-left-width: 0px;border-left-style: solid;border-bottom-width: 0px;"></iframe>
+          style="width: 100%; border: 0;"></iframe>
       </div>
     </div>
 
@@ -179,6 +179,7 @@
         }
       })();
     </script>
+
 </body>
 
 </html>

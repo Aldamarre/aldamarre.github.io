@@ -1,6 +1,6 @@
 * {
   scrollbar-width: none;
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
 }
 
 body {
@@ -69,12 +69,13 @@ body {
 }
 
 .flex-item-1 {
-  height: 95vh;
+  height: fit-content;
   width: calc(100% - 200px);
   max-width: 1200px;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
-  margin: 0 auto;
+  margin: 60px auto ;
+
   overflow-y: scroll;
 }
 
@@ -156,9 +157,15 @@ body {
 }
 
 .tabcontent {
-  display: none;
-  border: 1px solid #ccc;
-  border-top: none;
+  height: fit-content;             
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tabcontent iframe {
+  display: block;
+  width: 100%;
+height: 740px;  border: 0;
 }
 
 marquee {
@@ -272,10 +279,6 @@ element {
 
   * {
     font-size: 12px !important;
-  }
-
-  iframe {
-    height: 660vw !important;
   }
 
   .raining {
