@@ -275,6 +275,10 @@ element {
   }
 }
 
+p{
+  margin: 0;
+  font-weight: 500;
+}
 @media (max-width: 600px) {
   .column {
     flex: 1 1 100%;
@@ -294,5 +298,9 @@ element {
 
  a  button{
     font-size: 50px!important;
+    font-weight: 500;
   }
+
+
+
 }
