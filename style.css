@@ -475,3 +475,11 @@ img {
   max-width: 100%;
 }
 
+
+.tablinks{
+  font-weight: bold;
+}
+
+ button {
+  font-weight: bold;
+}

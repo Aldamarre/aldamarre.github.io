@@ -277,7 +277,7 @@ element {
 
 p{
   margin: 0;
-  font-weight: 500;
+  font-weight: bolder;
 }
 @media (max-width: 600px) {
   .column {
@@ -293,13 +293,9 @@ p{
 @media only screen and (max-width: 119em) and (min-height: 844px) {
   .flex-item-1 {
     width: 900px;
-    font-size: 50px;
+    font-weight: bolder;
   }
 
- a  button{
-    font-size: 50px!important;
-    font-weight: 500;
-  }
 
 
 
