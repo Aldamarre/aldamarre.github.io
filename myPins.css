@@ -74,7 +74,7 @@ body {
   max-width: 1200px;
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
-  margin: 60px auto ;
+  margin: 3% auto 3% auto;
 
   overflow-y: scroll;
 }
