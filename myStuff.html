@@ -376,65 +376,7 @@
                         transition: filter 0.3s ease-in-out;
                     }
                 </style>
-                <script>
-                    function getDominantNonBrightColor(img) {
-                        const canvas = document.createElement('canvas');
-                        const context = canvas.getContext('2d');
 
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        context.drawImage(img, 0, 0);
-
-                        const pixelData = context.getImageData(0, 0, canvas.width, canvas.height).data;
-                        const colorCounts = {};
-
-                        const step = 4 * 10;
-                        const whiteThreshold = 240;
-                        const brightnessThreshold = 200;
-                        const fallbackColor = 'rgb(100, 50, 150)';
-
-                        for (let i = 0; i < pixelData.length; i += step) {
-                            const r = pixelData[i];
-                            const g = pixelData[i + 1];
-                            const b = pixelData[i + 2];
-                            const a = pixelData[i + 3];
-
-                            if (a < 128 || (r > whiteThreshold && g > whiteThreshold && b > whiteThreshold) || (r + g + b) / 3 > brightnessThreshold) {
-                                continue;
-                            }
-
-                            const rgb = `${r},${g},${b}`;
-                            colorCounts[rgb] = (colorCounts[rgb] || 0) + 1;
-                        }
-
-                        let maxCount = 0;
-                        let dominantColor = null;
-
-                        for (const rgb in colorCounts) {
-                            if (colorCounts[rgb] > maxCount) {
-                                maxCount = colorCounts[rgb];
-                                dominantColor = rgb;
-                            }
-                        }
-
-                        return dominantColor ? `rgb(${dominantColor})` : fallbackColor;
-                    }
-
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const images = document.querySelectorAll('.images');
-                        images.forEach(img => {
-                            if (img.complete) {
-                                const dominantColor = getDominantNonBrightColor(img);
-                                img.style.filter = `drop-shadow(10 10 200px ${dominantColor})`;
-                            } else {
-                                img.onload = () => {
-                                    const dominantColor = getDominantNonBrightColor(img);
-                                    img.style.filter = `drop-shadow(0 0px 7px ${dominantColor})`;
-                                };
-                            }
-                        });
-                    });
-                </script>
             </div>
         </div>
 
