@@ -2,7 +2,12 @@
 <html>
 
 <head>
-        <link rel="icon" href="/images/planet.png" type="image/gif">
+    <link rel="icon" href="/images/planet.png" type="image/gif">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +91,7 @@
 </style>
 
 <body>
-
+    <script src="dark.js"></script>
     <div class="flex-item-1" style="margin-left: 100px;margin-right: 100px; scrollbar-width: none;">
         <div class="tab"
             style="position: sticky; top: 0; border-bottom-width: 1px; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; background-color: white; z-index: 10;">
@@ -115,6 +120,21 @@
                 style="font-size: 0.8rem; font-style: oblique; letter-spacing: -0.01em; width: 100%;">
                 a catalog of stuff i own, like, or make!
             </button>
+            <button id="darkModeToggle" class="push-right" onclick="toggleDarkMode()"
+                style="font-size: 17px; border-left: 0px; border-right: 0px; padding: 0px 10px;">
+                <strong>✦</strong>
+            </button>
+
+            <style>
+                .tab {
+                    display: flex;
+
+                }
+
+                .push-right {
+                    margin-left: auto;
+                }
+            </style>
         </div>
 
 
@@ -188,21 +208,23 @@
                         alt="American Football"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=J9TDUN-ebRM&list=OLAK5uy_ng9ITAOubHZ-kKanet_Ay0JXLqA2gqQic&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/asitwere.webp"
+                <a href="https://www.youtube.com/watch?v=J9TDUN-ebRM&list=OLAK5uy_ng9ITAOubHZ-kKanet_Ay0JXLqA2gqQic&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/asitwere.webp"
                         alt="As It Were"></a>
 
 
                 <a href="https://youtu.be/VEiQxbfsEoE?si=fOpvOr1MvwQIpt1y" target="_blank
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/berloiz.webp" alt="Berloiz"></a>
+                    rel=" noopener noreferrer"><img class="images hvr-bob" src="/images/berloiz.webp"
+                        alt="Berloiz"></a>
 
 
                 <a href="https://youtu.be/Y0WO2Km-r94?si=Ac_9oe2BdrfqGfrs" target="_blank"
                     rel="noopener noreferrer"><img class="images hvr-bob" src="/images/bjork.webp" alt="Björk"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=9VyWM6xjffY&list=OLAK5uy_l6rakg4fA8g-kk4r8zrNbExpobvUhfqNk" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/blaire.webp" alt="Blaire"></a>
+                <a href="https://www.youtube.com/watch?v=9VyWM6xjffY&list=OLAK5uy_l6rakg4fA8g-kk4r8zrNbExpobvUhfqNk"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/blaire.webp"
+                        alt="Blaire"></a>
 
 
                 <a href="https://youtu.be/wi_6oxSYUYU?si=ia7EBoF4EexlwsW7" target="_blank"
@@ -210,52 +232,53 @@
                         alt="blednost"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=aJw7YwDTklM&list=OLAK5uy_mNfrFk0pN2FT4ljiUiquW4TJ_aDbGwLzg" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/coldvisions.webp"
+                <a href="https://www.youtube.com/watch?v=aJw7YwDTklM&list=OLAK5uy_mNfrFk0pN2FT4ljiUiquW4TJ_aDbGwLzg"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/coldvisions.webp"
                         alt="Cold Visions"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=8ACIXovHBqM&list=OLAK5uy_mxOaDZq7CAlU7DO_vLOFwBo-i2lVvmm8M" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/eldritch.webp"
+                <a href="https://www.youtube.com/watch?v=8ACIXovHBqM&list=OLAK5uy_mxOaDZq7CAlU7DO_vLOFwBo-i2lVvmm8M"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/eldritch.webp"
                         alt="Eldritch Anisette"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=4sKw839dtik&list=OLAK5uy_nSCh_kU1fyTCLoEthlj5teV_VCMiVZGrM" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/febuary.webp" alt="Febuary"></a>
+                <a href="https://www.youtube.com/watch?v=4sKw839dtik&list=OLAK5uy_nSCh_kU1fyTCLoEthlj5teV_VCMiVZGrM"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/febuary.webp"
+                        alt="Febuary"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=qd9RhMBE7Jo&list=OLAK5uy_n_y-c6u22OCnA73p2UGmbSI5LAeQWJsHg&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/firstdayback.webp"
-                        alt="First Day Back"></a>
+                <a href="https://www.youtube.com/watch?v=qd9RhMBE7Jo&list=OLAK5uy_n_y-c6u22OCnA73p2UGmbSI5LAeQWJsHg&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob"
+                        src="/images/firstdayback.webp" alt="First Day Back"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=VLNyUyOmM7c&list=OLAK5uy_km-CTmitSCsILJyH2PSY1TUdqQ4dun1OM" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/fleshwater2000.webp"
-                        alt="Fleshwater 2000"></a>
+                <a href="https://www.youtube.com/watch?v=VLNyUyOmM7c&list=OLAK5uy_km-CTmitSCsILJyH2PSY1TUdqQ4dun1OM"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob"
+                        src="/images/fleshwater2000.webp" alt="Fleshwater 2000"></a>
 
 
-                <a href="https://www.youtube.com/playlist?list=OLAK5uy_mGjdf5vqkBOeFxqEwZlqXwTxBW1oNPoMQ" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/gingerbee.webp"
+                <a href="https://www.youtube.com/playlist?list=OLAK5uy_mGjdf5vqkBOeFxqEwZlqXwTxBW1oNPoMQ"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/gingerbee.webp"
                         alt="Gingerbee"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=SI15wKG2O-c&list=OLAK5uy_lbnUj56iEPP0zx0IK-WvXBsiZtQC-BjAE" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/girlsthat.webp"
+                <a href="https://www.youtube.com/watch?v=SI15wKG2O-c&list=OLAK5uy_lbnUj56iEPP0zx0IK-WvXBsiZtQC-BjAE"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/girlsthat.webp"
                         alt="Girls That"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=Oextk-If8HQ&list=OLAK5uy_nLfLGiix8TqZ1XE-fqod16g25xrWOLbL4" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/hopesandfears.webp"
-                        alt="Hopes and Fears"></a>
+                <a href="https://www.youtube.com/watch?v=Oextk-If8HQ&list=OLAK5uy_nLfLGiix8TqZ1XE-fqod16g25xrWOLbL4"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob"
+                        src="/images/hopesandfears.webp" alt="Hopes and Fears"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=9q2FIMXVJv8&list=OLAK5uy_ksJjNKp2eiojRt3B1cOcukmUTuc3LZmlk" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/ihatemyself.webp"
+                <a href="https://www.youtube.com/watch?v=9q2FIMXVJv8&list=OLAK5uy_ksJjNKp2eiojRt3B1cOcukmUTuc3LZmlk"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/ihatemyself.webp"
                         alt="I Hate Myself"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=azXquj3Kwrw&list=OLAK5uy_keF4liHBpGYxaPADOV8raBuyCXrzP2uLk" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/inwardheal.webp"
+                <a href="https://www.youtube.com/watch?v=azXquj3Kwrw&list=OLAK5uy_keF4liHBpGYxaPADOV8raBuyCXrzP2uLk"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/inwardheal.webp"
                         alt="Inward Heal"></a>
 
 
@@ -264,73 +287,77 @@
                         alt="Lost Not Found"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=g5c7hThw9uk&list=OLAK5uy_muyXtnR72WTGqADAz2grWy3SNdUbFJHKk" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/malcomtodd.webp"
+                <a href="https://www.youtube.com/watch?v=g5c7hThw9uk&list=OLAK5uy_muyXtnR72WTGqADAz2grWy3SNdUbFJHKk"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/malcomtodd.webp"
                         alt="Malcolm Todd"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=ZFD-LjyWPP4&list=OLAK5uy_mbDOrvqQ4eKLnzsClmA1RVyvo6XRTMWoU" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/ogbertthenerd.webp"
-                        alt="Ogbert the Nerd"></a>
+                <a href="https://www.youtube.com/watch?v=ZFD-LjyWPP4&list=OLAK5uy_mbDOrvqQ4eKLnzsClmA1RVyvo6XRTMWoU"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob"
+                        src="/images/ogbertthenerd.webp" alt="Ogbert the Nerd"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=ZqkZWA3mmz0&list=OLAK5uy_lugdkQczoHAZ3L_2Sn-vj_Tx9-6XqJC_4&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/osamason.webp"
+                <a href="https://www.youtube.com/watch?v=ZqkZWA3mmz0&list=OLAK5uy_lugdkQczoHAZ3L_2Sn-vj_Tx9-6XqJC_4&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/osamason.webp"
                         alt="OsamaSon"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=R-In2Zwy-9k&list=OLAK5uy_nLLKBgmoMxaBGW0uYw8s7Q4KwRW7gokXQ&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/panchiko.webp"
+                <a href="https://www.youtube.com/watch?v=R-In2Zwy-9k&list=OLAK5uy_nLLKBgmoMxaBGW0uYw8s7Q4KwRW7gokXQ&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/panchiko.webp"
                         alt="Panchiko"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=H_xStLe9XLM&list=OLAK5uy_lcp_Ju9oBP3VMuW2_h0kfmlO2diljdrEQ&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/passionpit.webp"
+                <a href="https://www.youtube.com/watch?v=H_xStLe9XLM&list=OLAK5uy_lcp_Ju9oBP3VMuW2_h0kfmlO2diljdrEQ&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/passionpit.webp"
                         alt="Passion Pit"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=pEfSYgT76Fw" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/sinema.webp" alt="Sinema"></a>
+                <a href="https://www.youtube.com/watch?v=pEfSYgT76Fw" target="_blank" rel="noopener noreferrer"><img
+                        class="images hvr-bob" src="/images/sinema.webp" alt="Sinema"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=ZrKjL7noYWI&list=OLAK5uy_mWp7E13zEThDdYdEQ3E7RIgld_hVF0wgg" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/snackfunds.webp"
+                <a href="https://www.youtube.com/watch?v=ZrKjL7noYWI&list=OLAK5uy_mWp7E13zEThDdYdEQ3E7RIgld_hVF0wgg"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/snackfunds.webp"
                         alt="Snackfunds"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=IuNb2lk7bes&list=OLAK5uy_nRlFYwCsD9cZQ9ju5qbau1iQy2GcZjM_o" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/somedaymaybe.webp"
-                        alt="Someday Maybe"></a>
+                <a href="https://www.youtube.com/watch?v=IuNb2lk7bes&list=OLAK5uy_nRlFYwCsD9cZQ9ju5qbau1iQy2GcZjM_o"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob"
+                        src="/images/somedaymaybe.webp" alt="Someday Maybe"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=aT4KHcl7StU&list=OLAK5uy_kaaUNrfUl5ev6sbY7_qWadUe6DIplr57s" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/ST_TBD.webp" alt="TBD"></a>
+                <a href="https://www.youtube.com/watch?v=aT4KHcl7StU&list=OLAK5uy_kaaUNrfUl5ev6sbY7_qWadUe6DIplr57s"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/ST_TBD.webp"
+                        alt="TBD"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=SMPd4hUKcgw&list=OLAK5uy_lB0Lgr4jmkgzYXJuXIHcre3gI_FJffWXE" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/sunkilmoon.webp"
+                <a href="https://www.youtube.com/watch?v=SMPd4hUKcgw&list=OLAK5uy_lB0Lgr4jmkgzYXJuXIHcre3gI_FJffWXE"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/sunkilmoon.webp"
                         alt="Sun Kil Moon"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=bO-HeKQWmd4&list=OLAK5uy_l80bUgOWbxystHvLg9w59KBZiYLMe6Cjw" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/thefray.webp" alt="The Fray"></a>
+                <a href="https://www.youtube.com/watch?v=bO-HeKQWmd4&list=OLAK5uy_l80bUgOWbxystHvLg9w59KBZiYLMe6Cjw"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/thefray.webp"
+                        alt="The Fray"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=ggJJdlJokao" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/TYA.webp" alt="TYA"></a>
+                <a href="https://www.youtube.com/watch?v=ggJJdlJokao" target="_blank" rel="noopener noreferrer"><img
+                        class="images hvr-bob" src="/images/TYA.webp" alt="TYA"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=yowWiqKkea8&list=OLAK5uy_msxpAaiZ3tL_GDRYTq5v9_ujODXiFXums&index=2" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/unmusique.webp"
+                <a href="https://www.youtube.com/watch?v=yowWiqKkea8&list=OLAK5uy_msxpAaiZ3tL_GDRYTq5v9_ujODXiFXums&index=2"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/unmusique.webp"
                         alt="Unmusique"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=bzFB7cv4niE&list=OLAK5uy_nOjUFuVdGerCsGWcSDtLWHjnO52lHJM9M" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/uss.webp" alt="USS"></a>
+                <a href="https://www.youtube.com/watch?v=bzFB7cv4niE&list=OLAK5uy_nOjUFuVdGerCsGWcSDtLWHjnO52lHJM9M"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/uss.webp"
+                        alt="USS"></a>
 
 
-                <a href="https://www.youtube.com/watch?v=TnY-txAomLQ&list=OLAK5uy_kE4hNg-33u0LiVeZRjA1XYQN7zmnGbG9w" target="_blank"
-                    rel="noopener noreferrer"><img class="images hvr-bob" src="/images/wtf.webp" alt="WTF"></a>
+                <a href="https://www.youtube.com/watch?v=TnY-txAomLQ&list=OLAK5uy_kE4hNg-33u0LiVeZRjA1XYQN7zmnGbG9w"
+                    target="_blank" rel="noopener noreferrer"><img class="images hvr-bob" src="/images/wtf.webp"
+                        alt="WTF"></a>
 
 
                 <div><iframe src="/webdeck-player/index.html" height="250" width="600"

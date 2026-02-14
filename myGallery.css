@@ -4,6 +4,23 @@
   font-family: "kode Mono";
 }
 
+
+/* Dark Mode Styles */
+.dark-mode, 
+.dark-mode img, 
+.dark-mode video, 
+.dark-mode .side.cover, 
+.dark-mode .side.top {
+    filter: invert(1) !important;
+}
+
+.dark-mode body {
+    background-color: white !important;
+}
+
+
+
+
 body {
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 5px, transparent 5px),
     linear-gradient(rgba(0, 0, 0, 0.05) 5px, transparent 5px),

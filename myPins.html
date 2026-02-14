@@ -13,174 +13,194 @@
   <link rel="stylesheet" href=myPins.css>
   <link rel="preconnect" href="https://petracoding.github.io">
   <div class="crt"></div>
-    <link rel="icon" href="/images/paper6.gif" type="image/gif">
+  <link rel="icon" href="/images/paper6.gif" type="image/gif">
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
 
+  </script>
 </head>
 
 <body>
+  <script src="dark.js"></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
   </style>
-    <div class="flex-item-1">
-      <div class="tab" style="
+  <div class="flex-item-1">
+    <div class="tab" style="
             border-bottom-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-top-width: 0px;
             
           ">
-        <a href="index.html">
-          <button style="font-size: 17px; font-weight: bolder;">
-            <- Back </button>
-        </a>
-        <button class="tablinks" onclick="openTab(event, 'Character-design')" id="defaultOpen">
-          Character-design
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Apparel')">
-          Apparel
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'People')">
-          People
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Raining')">
-          Raining Cats and Dogs
-        </button>
-      </div>
-      <marquee behavior="scroll" direction="right" scrollamount="15" loop="infinite">
-  <a href="#">FOR INSPIRATION ONLY</a>
-  &nbsp;•&nbsp;
-  <a href="#">THESE ARE NOT MINE</a>
-  &nbsp;•&nbsp;
-  <a href="#">THESE ARE ONLY PINS FROM PINTEREST</a>
-  &nbsp;•&nbsp;
-  <a href="#">THESE ARE NOT MINE</a>
-</marquee>
+      <a href="index.html">
+        <button style="font-size: 17px; font-weight: bolder;">
+          <- Back </button>
+      </a>
+      <button class="tablinks" onclick="openTab(event, 'Character-design')" id="defaultOpen">
+        Character-design
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Apparel')">
+        Apparel
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'People')">
+        People
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Raining')">
+        Raining Cats and Dogs
+      </button>
+      <button id="darkModeToggle" class="push-right" onclick="toggleDarkMode()"
+        style="font-size: 17px; border-left: #000000 solid 1px; border-right: 0px; padding: 0px 10px;">
+        <strong>✦</strong>
 
 
+        <style>
+          .tab {
+            display: flex;
 
-      <style>
-        .news-ticker-container {
-          width: 100%;
-          overflow: hidden;
-          background-color: #333;
-          color: #fff;
-          padding: 10px 0;
-          box-sizing: border-box;
-        }
-
-          *{
-            overscroll-behavior-y: none;
-          }
-        .news-ticker-text {
-          display: inline-block;
-          padding-left: 100%;
-          animation: scroll-news 15s linear infinite;
-          white-space: nowrap;
-        }
-
-        @keyframes scroll-news {
-          0% {
-            transform: translate3d(-100%, 0, 0);
           }
 
-          100% {
-            transform: translate3d(0, 0, 0);
+          .push-right {
+            margin-left: auto;
           }
-        }
-
-        .news-item {
-          display: inline-block;
-          margin: 0 20px;
-          color: #fff;
-          text-decoration: none;
-          font-size: 16px;
-        }
-
-        .news-item:hover {
-          text-decoration: underline;/
-        }
-
-        .news-ticker-container:hover .news-ticker-text {
-          animation-play-state: paused;
-        }
-      </style>
-
-
-      <div>
-      </div>
-
-      <div id="Character-design" class="tabcontent">
-        <iframe class="character-design"
-          src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/character-design&amp;hideHeader=1&amp;hideFooter=1&amp;transparent=1"
-          loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-            style="width: 100%; border: 0;">></iframe>
-      </div>
-
-      <div id="Apparel" class="tabcontent"
-        >
-        <iframe
-          data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/apparel&amp/&hideHeader=1&hideFooter=1&transparent=0"
-          loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width: 100%; border: 0;"></iframe>
-      </div>
-
-      <div id="People" class="tabcontent"
-        >
-        <iframe
-          data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/people/&hideHeader=1&hideFooter=1&transparent=1"
-          loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-         style="width: 100%; border: 0;"></iframe>
-      </div>
-      <div id="Raining" class="tabcontent"
-       >
-        <iframe class="raining"
-          data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/raining-cats-and-dogs&hideHeader=1&hideFooter=1&transparent=1"
-          loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
-          style="width: 100%; border: 0;"></iframe>
-      </div>
+        </style>
     </div>
+    <marquee behavior="scroll" direction="right" scrollamount="15" loop="infinite">
+      <a href="#">FOR INSPIRATION ONLY</a>
+      &nbsp;•&nbsp;
+      <a href="#">THESE ARE NOT MINE</a>
+      &nbsp;•&nbsp;
+      <a href="#">THESE ARE ONLY PINS FROM PINTEREST</a>
+      &nbsp;•&nbsp;
+      <a href="#">THESE ARE NOT MINE</a>
+    </marquee>
 
 
-    <script>
-      function openTab(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+
+    <style>
+      .news-ticker-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        box-sizing: border-box;
+      }
+
+      * {
+        overscroll-behavior-y: none;
+      }
+
+      .news-ticker-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll-news 15s linear infinite;
+        white-space: nowrap;
+      }
+
+      @keyframes scroll-news {
+        0% {
+          transform: translate3d(-100%, 0, 0);
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
 
-        var tab = document.getElementById(cityName);
-        tab.style.display = "block";
-        evt.currentTarget.className += " active";
-
-        var iframes = tab.getElementsByTagName('iframe');
-        for (i = 0; i < iframes.length; i++) {
-          var frame = iframes[i];
-          var ds = frame.getAttribute('data-src');
-          if (ds && (!frame.getAttribute('src') || frame.getAttribute('src').length === 0)) {
-            frame.setAttribute('src', ds);
-          }
+        100% {
+          transform: translate3d(0, 0, 0);
         }
       }
 
-      document.getElementById("defaultOpen").click();
-    </script>
-    <script>
-      (function () {
-        var scrollContainer = document.querySelector('.tab');
-        if (scrollContainer && scrollContainer.addEventListener) {
-          scrollContainer.addEventListener('wheel', function (event) {
-            
-            event.preventDefault();
-            scrollContainer.scrollLeft += event.deltaY;
-          }, { passive: false });
+      .news-item {
+        display: inline-block;
+        margin: 0 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .news-item:hover {
+        text-decoration: underline;/
+      }
+
+      .news-ticker-container:hover .news-ticker-text {
+        animation-play-state: paused;
+      }
+    </style>
+
+
+    <div>
+    </div>
+
+    <div id="Character-design" class="tabcontent">
+      <iframe class="character-design"
+        src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/character-design&amp;hideHeader=1&amp;hideFooter=1&amp;transparent=1"
+        loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
+        style="width: 100%; border: 0;">></iframe>
+    </div>
+
+    <div id="Apparel" class="tabcontent">
+      <iframe
+        data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/apparel&amp/&hideHeader=1&hideFooter=1&transparent=1"
+        loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
+        style="width: 100%; border: 0;"></iframe>
+    </div>
+
+    <div id="People" class="tabcontent">
+      <iframe
+        data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarre2/people/&hideHeader=1&hideFooter=1&transparent=1"
+        loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
+        style="width: 100%; border: 0;"></iframe>
+    </div>
+    <div id="Raining" class="tabcontent">
+      <iframe class="raining"
+        data-src="https://petracoding.github.io/pinterest/board.html?link=aldamarrejean12/raining-cats-and-dogs&hideHeader=1&hideFooter=1&transparent=1"
+        loading="eager" fetchpriority="high" importance="high" allow="autoplay; encrypted-media"
+        style="width: 100%; border: 0;"></iframe>
+    </div>
+  </div>
+
+
+  <script>
+    function openTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      var tab = document.getElementById(cityName);
+      tab.style.display = "block";
+      evt.currentTarget.className += " active";
+
+      var iframes = tab.getElementsByTagName('iframe');
+      for (i = 0; i < iframes.length; i++) {
+        var frame = iframes[i];
+        var ds = frame.getAttribute('data-src');
+        if (ds && (!frame.getAttribute('src') || frame.getAttribute('src').length === 0)) {
+          frame.setAttribute('src', ds);
         }
-      })();
-    </script>
+      }
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
+  <script>
+    (function () {
+      var scrollContainer = document.querySelector('.tab');
+      if (scrollContainer && scrollContainer.addEventListener) {
+        scrollContainer.addEventListener('wheel', function (event) {
+
+          event.preventDefault();
+          scrollContainer.scrollLeft += event.deltaY;
+        }, { passive: false });
+      }
+    })();
+  </script>
 
 </body>
 

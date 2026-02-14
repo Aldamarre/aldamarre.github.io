@@ -2,6 +2,12 @@
 <html>
 
 <head>
+<script>
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
+</script>
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=safari" />
   <title>myGallery</title>
@@ -100,14 +106,14 @@
     vertical-align: middle;
     border: 1px solid #000000;
     -webkit-user-drag: none;
-    user-drag: none;
     user-select: none;
     touch-action: manipulation;
   }
 
   img {
-  transition: transform 6.3s ease; /* Smooth transition */
-}
+    transition: transform 6.3s ease;
+  }
+
   .column img:hover {
     border-color: rgb(0, 0, 0);
     border-width: 1px;
@@ -122,25 +128,46 @@
 </style>
 
 <body>
+  <script src="dark.js"></script>
   <div class="flex-item-1" style=" margin: 0 auto; max-width: fit-content; overflow: visible;">
-    <div class="tab" style="
-            border-bottom-width: 1px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-            border-top-width: 0px;
-            position: sticky; top: 0;
-          ">
-      <a href="index.html" style="color: #000000; text-decoration: none;">
-        <button style="font-size: 17px; font-weight: bolder;padding-bottom: 5px;
-padding-top: 05px;">
-          &lt;-Back
-        </button>
-      </a>
-      <div class="tablinks active" style="position: relative; z-index: 9999; display: inline-block; border-right: 1px solid; padding-top: 5px; padding-bottom: 5px; padding-left: 16px; padding-right: 16px;" role="presentation" aria-hidden="true">
-        <p>myGallery</p>
-      </div>
+<div class="tab"
+  style="position: sticky; top: 0; border-bottom-width: 1px; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; background-color: white; z-index: 10;">
 
-    </div>
+  <style>#defaultOpen {
+padding-top: 7px;
+padding-bottom: 7px;
+}
+
+.tab  button {
+padding-top: 7px;
+padding-bottom: 7px;
+}
+</style>
+
+  <a href="index.html" style="color: #000000; text-decoration: none;">
+    <button style="font-size: 17px; font-weight: bolder;">
+      &lt;- Back
+    </button>
+  </a>
+<button style="font-size: 17px; border-left: 0px; pointer-events: none; cursor: default;">
+  <strong>myStuff</strong>
+</button>
+    <button id="darkModeToggle" class="push-right" onclick="toggleDarkMode()" style="font-size: 17px; border-left: #000000 solid 1px; border-right: 0px; padding: 0px 10px;">
+      <strong>✦</strong>
+
+      <style>
+        .tab {
+          display: flex;
+      
+        }
+      
+        .push-right {
+          margin-left: auto;
+        }
+      </style>
+</div>
+
+
 
     <div style="padding: 10px; display: right;">
 
@@ -149,7 +176,7 @@ padding-top: 05px;">
         <div class="gallery-container" style="padding-bottom:2rem;" aria-label="Image gallery">
           <div class="column">
 
-           <a href="/myGallery/image.webp" target="_blank"><img src="/myGallery/image.webp"> </a>
+            <a href="/myGallery/image.webp" target="_blank"><img src="/myGallery/image.webp"> </a>
             <a href="/myGallery/IMG_0048.webp" target="_blank"><img src="/myGallery/IMG_0048.webp"> </a>
             <a href="/myGallery/IMG_1704.webp" target="_blank"><img src="/myGallery/IMG_1704.webp"> </a>
             <a href="/myGallery/IMG_1711.webp" target="_blank"><img src="/myGallery/IMG_1711.webp"> </a>
@@ -167,11 +194,13 @@ padding-top: 05px;">
             <a href="/myGallery/IMG_3382.webp" target="_blank"><img src="/myGallery/IMG_3382.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_1384.webp" target="_blank"><img src="/myGallery/IMG_1384.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_0307.webp" target="_blank"><img src="/myGallery/IMG_0307.webp" loading="lazy"></a>
-            <a href="/myGallery/cachedImage(3).webp" target="_blank"><img src="/myGallery/cachedImage(3).webp" loading="lazy"></a>
+            <a href="/myGallery/cachedImage(3).webp" target="_blank"><img src="/myGallery/cachedImage(3).webp"
+                loading="lazy"></a>
 
           </div>
           <div class="column">
-            <a href="/myGallery/20241025_132404.webp" target="_blank"><img src="/myGallery/20241025_132404.webp" loading="lazy"></a>
+            <a href="/myGallery/20241025_132404.webp" target="_blank"><img src="/myGallery/20241025_132404.webp"
+                loading="lazy"></a>
             <a href="/myGallery/IMG_2050.webp" target="_blank"><img src="/myGallery/IMG_2050.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_0152.webp" target="_blank"><img src="/myGallery/IMG_0152.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_0559.webp" target="_blank"><img src="/myGallery/IMG_0559.webp" loading="lazy"></a>
@@ -179,11 +208,13 @@ padding-top: 05px;">
             <a href="/myGallery/IMG_9422.webp" target="_blank"><img src="/myGallery/IMG_9422.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_1386.webp" target="_blank"><img src="/myGallery/IMG_1386.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_1499.webp" target="_blank"><img src="/myGallery/IMG_1499.webp" loading="lazy"></a>
-            <a href="/myGallery/cachedImage(2).webp" target="_blank"><img src="/myGallery/cachedImage(2).webp" loading="lazy"></a>
+            <a href="/myGallery/cachedImage(2).webp" target="_blank"><img src="/myGallery/cachedImage(2).webp"
+                loading="lazy"></a>
 
           </div>
           <div class="column">
-            <a href="/myGallery/cachedImage(1).webp" target="_blank"><img src="/myGallery/cachedImage(1).webp" loading="lazy"></a>
+            <a href="/myGallery/cachedImage(1).webp" target="_blank"><img src="/myGallery/cachedImage(1).webp"
+                loading="lazy"></a>
             <a href="/myGallery/IMG_1212.webp" target="_blank"><img src="/myGallery/IMG_1212.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_2832.webp" target="_blank"><img src="/myGallery/IMG_2832.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_9100.webp" target="_blank"><img src="/myGallery/IMG_9100.webp" loading="lazy"></a>
@@ -191,7 +222,7 @@ padding-top: 05px;">
             <a href="/myGallery/IMG_1011.webp" target="_blank"><img src="/myGallery/IMG_1011.webp" loading="lazy"></a>
             <a href="/myGallery/IMG_9330.webp" target="_blank"><img src="/myGallery/IMG_9330.webp" loading="lazy"></a>
           </div>
-         
+
         </div>
       </div>
     </div>
