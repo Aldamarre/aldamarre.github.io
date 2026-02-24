@@ -4,16 +4,137 @@
   font-family: "kode Mono";
 }
 
-.dark-mode .hvr-bob:hover img {
-  filter: invert(1) drop-shadow(1px 1px 10px rgb(255, 81, 0)) !important;
-}
+    .dark-mode .flex-item-1 {
+      background-color: #050505 !important;
+      color: white;
+      border: solid 1px white;
 
-.dark-mode body {
-  background-color: white;
-}
+    }
 
+    .dark-mode .flex-item-2 {
+      background-color: #2e2e2e !important;
+      color: white;
+      border: solid 1px white;
+
+    }
+
+    .dark-mode .flex-item-3 {
+      background-color: #050505 !important;
+      color: white;
+      border: solid 1px white;
+
+    }
+
+    .dark-mode .flex-item-4 {
+      background-color: #050505 !important;
+      color: white;
+      border: solid 1px white;
+
+    }
+
+    .dark-mode .flex-item-5 {
+      background-color: #050505 !important;
+      color: white;
+      border: solid 1px white;
+
+    }
+
+    .dark-mode .flex-item-6 {
+      background-color: #050505 !important;
+      color: white;
+      border: solid 1px white;
+
+    }
+
+    .dark-mode .tab {
+      background-color: #353535 !important;
+      color: white;
+      border: solid 1px white;
+    }
+
+        .dark-mode .tab button.active {
+      background-color: #2c2c2c !important;
+
+    }
+
+        .dark-mode .tablinks {
+      background-color: #131313 !important;
+      color: white;
+      border-right: solid 1px white;
+    }
+
+    .dark-mode .swatch {
+      background-color: #35353500 !important;
+      color: white;
+    }
+
+       .dark-mode  .tooltiptext {
+      filter: invert(1);
+    }
+
+    .dark-mode .push-right  {
+      background-color: #131313 !important;
+      color: white;
+      border-left: #ffffff solid 1px !important;
+    }
+         .dark-mode a p {
+      color: white;
+    }
+     
+    .dark-mode .two-column-flex div
+ {
+      background-color: #353535 !important;
+      color: white;
+      border-right: solid 1px white;
+    }
+
+    .dark-mode #theme {
+      filter: invert(1);
+    }
+    .dark-mode body {
+      background-color: rgb(0, 0, 0) !important;
+      background:
+    linear-gradient(-90deg, rgba(255, 255, 255, 0.05) 5px, transparent 5px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 5px, transparent 5px),
+    linear-gradient(-90deg, rgba(255, 255, 255, 0.04) 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(
+      transparent 4px,
+      #0d0d0d 4px,
+      #0d0d0d 78px,
+      transparent 78px
+    ),
+    linear-gradient(-90deg, #555555 2px, transparent 2px),
+    linear-gradient(
+      -90deg,
+      transparent 4px,
+      #0d0d0d 4px,
+      #0d0d0d 78px,
+      transparent 78px
+    ),
+    linear-gradient(#555555 2px, transparent 2px), #0d0d0d;
+  background-size:
+    4px 4px,
+    4px 4px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px;
+
+      background-repeat: repeat;
+
+      font-family: "kode Mono", monospace !important;
+      font-optical-sizing: auto;
+      overflow: auto;
+
+      animation: diagonal-pan 10s linear infinite;
+    }
+
+   
 .dark-mode #blog {
-  filter: invert(1) !important;
+  filter: invert(1) !;
 }
 
 .two-column-flex {
@@ -36,7 +157,7 @@
 
 .swatch {
   height: auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   position: relative;
   color: black;
   display: inline-block;
@@ -429,8 +550,10 @@ element {
   bottom: 0;
   right: 0;
   background:
-    linear-gradient(#12101000 50%, #0000001a 50%),
-    linear-gradient(90deg, #ff000008, #00ff0005, #0000ff08);
+    /* Inverted: Light horizontal scanlines instead of dark ones */
+    linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.07) 50%),
+    /* Inverted: Cyan, Magenta, and Yellow subpixel simulation */
+    linear-gradient(90deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.03), rgba(255, 255, 0, 0.05));
   z-index: 400;
   background-size:
     100% 4px,
@@ -480,7 +603,7 @@ element {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #12101005;
+  background:rgba(237, 245, 245, 0.03);
   opacity: 0;
   z-index: 400;
   pointer-events: none;
@@ -581,3 +704,10 @@ img {
 button {
   font-weight: bold;
 }
+
+
+
+
+
+
+
