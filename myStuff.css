@@ -55,6 +55,7 @@
   background-color: #131313 !important;
   color: white;
   border-right: none;
+  border-left:solid 1px white !important;
 }
 .dark-mode a p {
   color: white;
@@ -71,7 +72,7 @@
 }
 
 
-.dark-mode #theme button {
+ button {
   font-family: "kode Mono", monospace !important;
 }
 .dark-mode body {
