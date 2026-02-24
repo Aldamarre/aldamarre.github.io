@@ -24,6 +24,27 @@
 </head>
 
 <body>
+  <div id="theme" style="
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    width: max-content;
+    height: auto;
+    display: none;       
+    position: fixed ;   
+    top: 50%;            
+    left: 50%;           
+    transform: translate(-50%, -50%); 
+    z-index: 1000;   border: solid 1px black;  background-color: #fff ">
+    <button id="darkModeToggle" onclick="toggleDarkMode();" style="margin: 0 auto;   font-size: 20px;
+   background-color: #00000000; border-color: rgba(0, 0, 0, 0)">Invert</button>
+    <br>
+    <button style=" margin: 0 auto; font-size: 20px;
+   background-color: #00000000; border-color: rgba(0, 0, 0, 0)">Pink</button>
+    <br>
+    <button style=" margin: 0 auto;  font-size: 20px;
+   background-color: #00000000; border-color: rgba(0, 0, 0, 0)">Blue</button>
+  </div>
   <script src="dark.js"></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
@@ -52,9 +73,20 @@
       <button class="tablinks" onclick="openTab(event, 'Raining')">
         Raining Cats and Dogs
       </button>
-      <button id="darkModeToggle" class="push-right" onclick="toggleDarkMode()"
-        style="font-size: 17px; border-left: #000000 solid 1px; border-right: 0px; padding: 0px 10px;">
-        <strong>✦</strong>
+        <button class="push-right" onclick="showDiv()"
+          style="font-size: 17px; border-left: #000000 solid 1px; border-right: 0px; padding: 0px 10px;">
+          <strong>✦</strong>
+        </button>
+        <script>
+          function showDiv() {
+            var div = document.getElementById('theme');
+            if (div.style.display === "none") {
+              div.style.display = "block";
+            } else {
+              div.style.display = "none";
+            }
+          }
+        </script>
 
 
         <style>

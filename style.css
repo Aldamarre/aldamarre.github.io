@@ -550,9 +550,7 @@ element {
   bottom: 0;
   right: 0;
   background:
-    /* Inverted: Light horizontal scanlines instead of dark ones */
     linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.07) 50%),
-    /* Inverted: Cyan, Magenta, and Yellow subpixel simulation */
     linear-gradient(90deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.03), rgba(255, 255, 0, 0.05));
   z-index: 400;
   background-size:
